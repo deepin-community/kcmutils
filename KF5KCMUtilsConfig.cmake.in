@@ -1,0 +1,13 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+find_dependency(KF5ConfigWidgets  "@KF_DEP_VERSION@")
+find_dependency(KF5Service        "@KF_DEP_VERSION@")
+
+@PACKAGE_SETUP_AUTOMOC_VARIABLES@
+
+include("${CMAKE_CURRENT_LIST_DIR}/KF5KCMUtilsTargets.cmake")
+
+include("${CMAKE_CURRENT_LIST_DIR}/KF5KCMUtilsMacros.cmake")
+
+@PACKAGE_INCLUDE_QCHTARGETS@
