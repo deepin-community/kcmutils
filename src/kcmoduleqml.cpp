@@ -97,8 +97,14 @@ KCModuleQml::KCModuleQml(std::unique_ptr<KQuickAddons::ConfigModule> configModul
 #endif
 
     connect(this, &KCModule::defaultsIndicatorsVisibleChanged, d->configModule.get(), &KQuickAddons::ConfigModule::setDefaultsIndicatorsVisible);
+#if KDECLARATIVE_BUILD_DEPRECATED_SINCE(5, 90)
     // KCModule takes ownership of the kabout data so we need to force a copy
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     setAboutData(new KAboutData(*d->configModule->aboutData()));
+    QT_WARNING_POP
+#endif
     setFocusPolicy(Qt::StrongFocus);
 
     // Build the UI
@@ -150,7 +156,7 @@ Kirigami.ApplicationItem {
     pageStack.globalToolBar.style: pageStack.wideMode && pageStack.columnView.columnResizeMode !== Kirigami.ColumnView.SingleColumn
         ? Kirigami.ApplicationHeaderStyle.Titles
         : Kirigami.ApplicationHeaderStyle.Breadcrumb
-    pageStack.globalToolBar.showNavigationButtons: true
+    pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton | Kirigami.ApplicationHeaderStyle.ShowForwardButton
 
     pageStack.columnView.columnResizeMode: pageStack.items.length > 0 && pageStack.items[0].Kirigami.ColumnView.fillWidth
         ? Kirigami.ColumnView.SingleColumn
@@ -179,11 +185,7 @@ Kirigami.ApplicationItem {
 
     d->pageRow = d->rootPlaceHolder->property("pageStack").value<QQuickItem *>();
     if (d->pageRow) {
-        QMetaObject::invokeMethod(d->pageRow,
-                                  "push",
-                                  Qt::DirectConnection,
-                                  Q_ARG(QVariant, QVariant::fromValue(d->configModule->mainUi())),
-                                  Q_ARG(QVariant, QVariant()));
+        d->pageRow->setProperty("initialPage", QVariant::fromValue(d->configModule->mainUi()));
 
         for (int i = 0; i < d->configModule->depth() - 1; i++) {
             QMetaObject::invokeMethod(d->pageRow,
@@ -274,10 +276,16 @@ QString KCModuleQml::quickHelp() const
     return d->configModule->quickHelp();
 }
 
+#if KDECLARATIVE_BUILD_DEPRECATED_SINCE(5, 90)
 const KAboutData *KCModuleQml::aboutData() const
 {
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     return d->configModule->aboutData();
+    QT_WARNING_POP
 }
+#endif
 
 void KCModuleQml::load()
 {

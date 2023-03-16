@@ -48,8 +48,91 @@ public:
         topLayout->addWidget(lab);
     }
 };
-/***************************************************************/
 
+KCModule *KCModuleLoader::loadModule(const KPluginMetaData &metaData, QWidget *parent, const QVariantList &args)
+{
+    Q_ASSERT(metaData.isValid());
+    if (!KAuthorized::authorizeControlModule(metaData.pluginId())) {
+        return reportError(ErrorReporting::Inline,
+                           i18n("The module %1 is disabled.", metaData.pluginId()),
+                           i18n("The module has been disabled by the system administrator."),
+                           parent);
+    }
+    const QVariantList args2 = QVariantList(args) << metaData.rawData().value(QStringLiteral("X-KDE-KCM-Args")).toArray();
+
+    auto factoryResult = KPluginFactory::loadFactory(metaData);
+    QString pluginKeyword = metaData.value(QStringLiteral("X-KDE-PluginKeyword"));
+    if (!factoryResult) {
+        // This is where QML KCMs used to be before the namespaces were changed based on https://phabricator.kde.org/T14517
+        // But the X-KDE-Library did not reflect this change, instead the "kcms" namespace was prepended
+        if (KPluginMetaData data(QLatin1String("kcms/") + metaData.fileName()); data.isValid()) {
+            factoryResult = KPluginFactory::loadFactory(data);
+            pluginKeyword.clear();
+        }
+    }
+
+    if (!factoryResult) {
+        return reportError(ErrorReporting::Inline, factoryResult.errorString, QString(), parent);
+    }
+
+    KPluginFactory *factory = factoryResult.plugin;
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 90)
+    const auto qmlKCMResult = factory->create<KQuickAddons::ConfigModule>(pluginKeyword, parent, args2);
+#else
+    const auto qmlKCMResult = factory->create<KQuickAddons::ConfigModule>(parent, args2);
+#endif
+
+    if (qmlKCMResult) {
+        std::unique_ptr<KQuickAddons::ConfigModule> kcm(qmlKCMResult);
+
+        if (!kcm->mainUi()) {
+            return reportError(ErrorReporting::Inline, i18n("Error loading QML file."), kcm->errorString(), parent);
+        }
+        return new KCModuleQml(std::move(kcm), parent, args2);
+    }
+
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 90)
+    const auto kcmoduleResult = factory->create<KCModule>(pluginKeyword, parent, args2);
+#else
+    const auto kcmoduleResult = factory->create<KCModule>(parent, args2);
+#endif
+    QT_WARNING_POP
+
+    if (kcmoduleResult) {
+        return kcmoduleResult;
+    }
+
+    return reportError(ErrorReporting::Inline, QString(), QString(), parent);
+}
+
+KCModule *KCModuleLoader::reportError(ErrorReporting report, const QString &text, const QString &details, QWidget *parent)
+{
+    QString realDetails = details;
+    if (realDetails.isNull()) {
+        realDetails = i18n(
+            "<qt><p>Possible reasons:<ul><li>An error occurred during your last "
+            "system upgrade, leaving an orphaned control module behind</li><li>You have old third party "
+            "modules lying around.</li></ul></p><p>Check these points carefully and try to remove "
+            "the module mentioned in the error message. If this fails, consider contacting "
+            "your distributor or packager.</p></qt>");
+    }
+    if (report & KCModuleLoader::Dialog) {
+        KMessageBox::detailedError(parent, text, realDetails);
+    }
+    if (report & KCModuleLoader::Inline) {
+        return new KCMError(text, realDetails, parent);
+    }
+    return nullptr;
+}
+
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 88)
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
 KCModule *KCModuleLoader::loadModule(const QString &module, ErrorReporting report, QWidget *parent, const QStringList &args)
 {
     return loadModule(KCModuleInfo(module), report, parent, args);
@@ -106,13 +189,11 @@ KCModule *KCModuleLoader::loadModule(const KCModuleInfo &mod, ErrorReporting rep
             if (result.errorReason != KPluginFactory::INVALID_PLUGIN) {
                 return reportError(report, i18n("Error loading config module"), result.errorString, parent);
             } else {
-                // KF6 TODO: make this an error
                 qCDebug(KCMUTILS_LOG) << "Couldn't find plugin" << QLatin1String("kcms/") + mod.library()
                                       << "-- falling back to old-style loading from desktop file";
             }
         }
 
-        // KF6 TODO: remove this compat block
         if (mod.service()) {
             module = mod.service()->createInstance<KCModule>(parent, args2, &error);
         }
@@ -121,7 +202,6 @@ KCModule *KCModuleLoader::loadModule(const KCModuleInfo &mod, ErrorReporting rep
         } else
 #if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 85)
         {
-            // KF6 TODO: remove this old compat block
             // get the create_ function
             QLibrary lib(QPluginLoader(mod.library()).fileName());
             if (lib.load()) {
@@ -156,37 +236,6 @@ KCModule *KCModuleLoader::loadModule(const KCModuleInfo &mod, ErrorReporting rep
                        parent);
 }
 
-KCModule *KCModuleLoader::loadModule(const KPluginMetaData &metaData, QWidget *parent, const QVariantList &args)
-{
-    Q_ASSERT(metaData.isValid());
-    if (!KAuthorized::authorizeControlModule(metaData.pluginId())) {
-        return reportError(ErrorReporting::Inline,
-                           i18n("The module %1 is disabled.", metaData.pluginId()),
-                           i18n("The module has been disabled by the system administrator."),
-                           parent);
-    }
-    const QVariantList args2 = QVariantList(args) << metaData.rawData().value(QStringLiteral("X-KDE-KCM-Args")).toArray();
-
-    const auto qmlKCMResult = KPluginFactory::instantiatePlugin<KQuickAddons::ConfigModule>(metaData, parent, args2);
-
-    if (qmlKCMResult) {
-        std::unique_ptr<KQuickAddons::ConfigModule> kcm(qmlKCMResult.plugin);
-
-        if (!kcm->mainUi()) {
-            return reportError(ErrorReporting::Inline, i18n("Error loading QML file."), kcm->errorString(), parent);
-        }
-        return new KCModuleQml(std::move(kcm), parent, args2);
-    }
-
-    const auto kcmoduleResult = KPluginFactory::instantiatePlugin<KCModule>(metaData, parent, args2);
-
-    if (kcmoduleResult) {
-        return kcmoduleResult.plugin;
-    }
-
-    return reportError(ErrorReporting::Inline, kcmoduleResult.errorString, QString(), parent);
-}
-
 void KCModuleLoader::unloadModule(const KCModuleInfo &mod)
 {
     // get the library loader instance
@@ -202,27 +251,6 @@ bool KCModuleLoader::isDefaults(const KCModuleInfo &mod, const QStringList &args
     }
 
     return true;
-}
-
-KCModule *KCModuleLoader::reportError(ErrorReporting report, const QString &text,
-                                      const QString &details, QWidget *parent)
-{
-    QString realDetails = details;
-    if (realDetails.isNull()) {
-        realDetails = i18n(
-            "<qt><p>Possible reasons:<ul><li>An error occurred during your last "
-            "system upgrade, leaving an orphaned control module behind</li><li>You have old third party "
-            "modules lying around.</li></ul></p><p>Check these points carefully and try to remove "
-            "the module mentioned in the error message. If this fails, consider contacting "
-            "your distributor or packager.</p></qt>");
-    }
-    if (report & KCModuleLoader::Dialog) {
-        KMessageBox::detailedError(parent, text, realDetails);
-    }
-    if (report & KCModuleLoader::Inline) {
-        return new KCMError(text, realDetails, parent);
-    }
-    return nullptr;
 }
 
 KCModuleData *KCModuleLoader::loadModuleData(const KCModuleInfo &mod, const QStringList &args)
@@ -246,3 +274,4 @@ KCModuleData *KCModuleLoader::loadModuleData(const KCModuleInfo &mod, const QStr
 
     return nullptr;
 }
+#endif

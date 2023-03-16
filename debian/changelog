@@ -1,3 +1,42 @@
+kcmutils (5.90.0-2) unstable; urgency=medium
+
+  * update
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 24 Apr 2022 19:07:35 +0800
+
+kcmutils (5.90.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Update symbols file from the logs of buildds.
+  * Mark the xauth, and xvfb build dependencies as !nocheck, as they are needed
+    only during dh_auto_test.
+  * Drop the unused 'testsuite' autopkgtest.
+  * Drop the unused debian/meta/ stuff.
+  * CI: enable again blhc, as it works fine now with blhc 0.13.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 19 Feb 2022 10:29:00 +0100
+
+kcmutils (5.90.0-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (5.89.0).
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.90.0).
+  * Added myself to the uploaders.
+  * Update symbols from build for 5.90.0.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Fri, 11 Feb 2022 23:46:45 +0100
+
+kcmutils (5.88.0-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (5.87.0).
+  * New upstream release (5.88.0).
+  * Force-bump frameworks internal b-d to 5.88.
+
+ -- Norbert Preining <norbert@preining.info>  Wed, 17 Nov 2021 06:07:38 +0900
+
 kcmutils (5.86.0-1) unstable; urgency=medium
 
   [ Norbert Preining ]

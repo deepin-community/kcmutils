@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-22 00:14+0000\n"
+"POT-Creation-Date: 2021-12-30 00:40+0000\n"
 "PO-Revision-Date: 2014-11-12 00:32+0200\n"
 "Last-Translator: Kaan Ozdincer <kaanozdincer@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -44,63 +44,24 @@ msgstr ""
 "tulliana@gmail.com, gorkem@kde.org, ibrahim@pardus.org.tr, volkangezer@gmail."
 "com"
 
-#: kcmoduleloader.cpp:68
-#, kde-format
-msgid "The module %1 could not be found."
-msgstr "%1 modülü bulunamadı."
-
-#: kcmoduleloader.cpp:69
-#, kde-format
-msgid ""
-"<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
-"qt>"
-msgstr "<qt><p>Tanı:<br />%1 masaüstü dosyası bulunamadı.</p></qt>"
-
-#: kcmoduleloader.cpp:75 kcmoduleloader.cpp:164
+#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:158
 #, kde-format
 msgid "The module %1 is disabled."
 msgstr "%1 modülü devre dışı."
 
-#: kcmoduleloader.cpp:76
-#, kde-format
-msgid ""
-"<qt><p>Either the hardware/software the module configures is not available "
-"or the module has been disabled by the administrator.</p></qt>"
-msgstr ""
-"<qt><p>Ya modülün yapılandırdığı donanım/yazılım mevcut değil ya da modül "
-"sistem yöneticisi tarafından devreden çıkartılmış.</p></qt>"
-
-#: kcmoduleloader.cpp:99 kcmoduleloader.cpp:176
-#, fuzzy, kde-format
-#| msgid "Error opening file."
-msgid "Error loading QML file."
-msgstr "Dosya açılırken hata oluştu."
-
-#: kcmoduleloader.cpp:107
-#, fuzzy, kde-format
-#| msgid "Error opening file."
-msgid "Error loading config module"
-msgstr "Dosya açılırken hata oluştu."
-
-#: kcmoduleloader.cpp:154
-#, kde-format
-msgid "The module %1 is not a valid configuration module."
-msgstr "%1 geçerli bir yapılandırma modülü değil."
-
-#: kcmoduleloader.cpp:155
-#, kde-format
-msgid ""
-"<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
-"qt>"
-msgstr "<qt>Tanı:<br />%1 masaüstü dosyası bir kitaplık belirtmiyor.</qt>"
-
-#: kcmoduleloader.cpp:165
+#: kcmoduleloader.cpp:58
 #, fuzzy, kde-format
 #| msgid "Please contact your system administrator."
 msgid "The module has been disabled by the system administrator."
 msgstr "Lütfen sistem yöneticiniz ile görüşün."
 
-#: kcmoduleloader.cpp:213
+#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:182
+#, fuzzy, kde-format
+#| msgid "Error opening file."
+msgid "Error loading QML file."
+msgstr "Dosya açılırken hata oluştu."
+
+#: kcmoduleloader.cpp:117
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt><p>Possible reasons:<ul><li>An error occurred during your last KDE "
@@ -122,13 +83,52 @@ msgstr ""
 "da başarısız olursa dağıtımınıza veya uygulamayı paketleyen geliştiriciye "
 "durumu bildirin.</p></qt>"
 
+#: kcmoduleloader.cpp:151
+#, kde-format
+msgid "The module %1 could not be found."
+msgstr "%1 modülü bulunamadı."
+
+#: kcmoduleloader.cpp:152
+#, kde-format
+msgid ""
+"<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
+"qt>"
+msgstr "<qt><p>Tanı:<br />%1 masaüstü dosyası bulunamadı.</p></qt>"
+
+#: kcmoduleloader.cpp:159
+#, kde-format
+msgid ""
+"<qt><p>Either the hardware/software the module configures is not available "
+"or the module has been disabled by the administrator.</p></qt>"
+msgstr ""
+"<qt><p>Ya modülün yapılandırdığı donanım/yazılım mevcut değil ya da modül "
+"sistem yöneticisi tarafından devreden çıkartılmış.</p></qt>"
+
+#: kcmoduleloader.cpp:190
+#, fuzzy, kde-format
+#| msgid "Error opening file."
+msgid "Error loading config module"
+msgstr "Dosya açılırken hata oluştu."
+
+#: kcmoduleloader.cpp:234
+#, kde-format
+msgid "The module %1 is not a valid configuration module."
+msgstr "%1 geçerli bir yapılandırma modülü değil."
+
+#: kcmoduleloader.cpp:235
+#, kde-format
+msgid ""
+"<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
+"qt>"
+msgstr "<qt>Tanı:<br />%1 masaüstü dosyası bir kitaplık belirtmiyor.</qt>"
+
 #: kcmoduleproxy.cpp:105
 #, kde-format
 msgctxt "Argument is application name"
 msgid "This configuration section is already opened in %1"
 msgstr "Bu yapılandırma bölümü zaten %1 içinde açık"
 
-#: kcmultidialog.cpp:52
+#: kcmultidialog.cpp:51
 #, kde-format
 msgid ""
 "The settings of the current module have changed.\n"
@@ -137,17 +137,17 @@ msgstr ""
 "Etkin modülde kaydedilmemiş değişiklikler var.\n"
 "Değişiklikleri kaydetmek mi yok saymak mı istiyorsunuz?"
 
-#: kcmultidialog.cpp:54
+#: kcmultidialog.cpp:53
 #, kde-format
 msgid "Apply Settings"
 msgstr "Ayarları Uygula"
 
-#: kcmultidialog.cpp:245 kpluginselector.cpp:805
+#: kcmultidialog.cpp:258 kpluginselector.cpp:809 kpluginwidget.cpp:360
 #, kde-format
 msgid "Configure"
 msgstr "Yapılandır"
 
-#: kpluginselector.cpp:129
+#: kpluginselector.cpp:136
 #, kde-format
 msgid ""
 "Automatic changes have been performed due to plugin dependencies. Click here "
@@ -156,7 +156,7 @@ msgstr ""
 "Eklenti bağımlılıklarını sağlayabilmek için otomatik değişiklikler yapıldı. "
 "Daha fazla bilgi için buraya tıklayın"
 
-#: kpluginselector.cpp:197
+#: kpluginselector.cpp:204
 #, kde-format
 msgid ""
 "Automatic changes have been performed in order to satisfy plugin "
@@ -164,7 +164,7 @@ msgid ""
 msgstr ""
 "Eklenti bağımlılıklarını sağlayabilmek için otomatik değişiklikler yapıldı:\n"
 
-#: kpluginselector.cpp:203
+#: kpluginselector.cpp:210
 #, kde-format
 msgid ""
 "\n"
@@ -175,7 +175,7 @@ msgstr ""
 "    %1 eklentisi %2 eklentisine olan bağımlılığı nedeni ile otomatik olarak "
 "seçildi"
 
-#: kpluginselector.cpp:205
+#: kpluginselector.cpp:212
 #, kde-format
 msgid ""
 "\n"
@@ -186,24 +186,24 @@ msgstr ""
 "    %1 eklentisinin seçimi %2 eklentisine olan bağımlılığı nedeni ile "
 "otomatik olarak kaldırıldı"
 
-#: kpluginselector.cpp:209
+#: kpluginselector.cpp:216
 #, kde-format
 msgid "Dependency Check"
 msgstr "Bağımlılık Kontrolü"
 
-#: kpluginselector.cpp:227
+#: kpluginselector.cpp:234
 #, kde-format
 msgid "%1 plugin automatically added due to plugin dependencies"
 msgid_plural "%1 plugins automatically added due to plugin dependencies"
 msgstr[0] "%1 eklenti eklenti bağımlıkları nedeniyle otomatik olarak kuruldu"
 msgstr[1] "%1 eklenti eklenti bağımlıkları nedeniyle otomatik olarak kuruldu"
 
-#: kpluginselector.cpp:231
+#: kpluginselector.cpp:238
 #, kde-format
 msgid ", "
 msgstr ", "
 
-#: kpluginselector.cpp:235
+#: kpluginselector.cpp:242
 #, kde-format
 msgid "%1 plugin automatically removed due to plugin dependencies"
 msgid_plural "%1 plugins automatically removed due to plugin dependencies"
@@ -212,13 +212,13 @@ msgstr[0] ""
 msgstr[1] ""
 "%1 eklenti eklenti bağımlıkları nedeniyle otomatik olarak kaldırıldı"
 
-#: kpluginselector.cpp:257
+#: kpluginselector.cpp:264 kpluginwidget.cpp:57
 #, fuzzy, kde-format
 #| msgid "Search"
 msgid "Search..."
 msgstr "Ara"
 
-#: kpluginselector.cpp:800
+#: kpluginselector.cpp:804 kpluginwidget.cpp:355
 #, fuzzy, kde-format
 #| msgid "&About"
 msgid "About"

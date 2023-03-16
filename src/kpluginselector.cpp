@@ -7,6 +7,9 @@
 */
 
 #include "kpluginselector.h"
+
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 90)
+
 #include "kpluginselector_p.h"
 
 #include <kcmutils_debug.h>
@@ -39,6 +42,10 @@
 #include <kcmoduleproxy.h>
 
 #define MARGIN 5
+
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
 
 KPluginSelector::Private::Private(KPluginSelector *parent)
     : QObject(parent)
@@ -549,11 +556,6 @@ void KPluginSelector::Private::PluginModel::clear()
     endResetModel();
 }
 
-QList<KService::Ptr> KPluginSelector::Private::PluginModel::pluginServices(const QModelIndex &index) const
-{
-    return static_cast<PluginEntry *>(index.internalPointer())->pluginInfo.kcmServices();
-}
-
 QModelIndex KPluginSelector::Private::PluginModel::index(int row, int column, const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
@@ -575,7 +577,9 @@ QVariant KPluginSelector::Private::PluginModel::data(const QModelIndex &index, i
     case PluginEntryRole:
         return QVariant::fromValue(pluginEntry);
     case ServicesCountRole:
-        return pluginEntry->pluginInfo.kcmServices().count();
+        return pluginEntry->pluginInfo.kcmServices().count() +
+            // if we have a X-KDE-ConfigModule key, we know that we have a config module
+            (pluginEntry->pluginInfo.property(QStringLiteral("X-KDE-ConfigModule")).toString().isEmpty() ? 0 : 1);
     case NameRole:
         return pluginEntry->pluginInfo.name();
     case CommentRole:
@@ -950,11 +954,31 @@ void KPluginSelector::Private::PluginDelegate::configure(const QModelIndex &inde
     // The first proxy is owned by the dialog itself
     QWidget *moduleProxyParentWidget = &configDialog;
 
-    const auto lstServices = pluginInfo.kcmServices();
-    for (const KService::Ptr &servicePtr : lstServices) {
-        if (!servicePtr->noDisplay()) {
-            KCModuleInfo moduleInfo(servicePtr);
-            KCModuleProxy *currentModuleProxy = new KCModuleProxy(moduleInfo, moduleProxyParentWidget, pluginSelector_d->kcmArguments);
+    QVector<KPluginMetaData> metaDataList;
+    const auto lstServices = KPluginInfo::fromServices(pluginInfo.kcmServices());
+    for (const KPluginInfo &info : lstServices) {
+        metaDataList << info.toMetaData();
+    }
+    const QString configModule = pluginInfo.property(QStringLiteral("X-KDE-ConfigModule")).toString();
+    if (!configModule.isEmpty()) {
+        const QString absoluteKCMPath = QPluginLoader(configModule).fileName();
+        // If we have a static plugin the filename does not exist
+        if (absoluteKCMPath.isEmpty()) {
+            const int idx = configModule.lastIndexOf(QLatin1Char('/'));
+            const QString pluginNamespace = configModule.left(idx);
+            const QString pluginId = configModule.mid(idx + 1);
+            metaDataList = {KPluginMetaData::findPluginById(pluginNamespace, pluginId)}; // Clear the list to avoid old desktop files to appear twice
+        } else {
+            // the KCMs don't need any metadata themselves, just set the name to make sure the KPluginMetaData object
+            // is valid & the internal usage has the data it needs
+            QJsonObject kplugin({{QLatin1String("Name"), pluginInfo.name()}});
+            KPluginMetaData data(QJsonObject{{QLatin1String("KPlugin"), kplugin}}, absoluteKCMPath);
+            metaDataList = {data}; // Clear the list to avoid old desktop files to appear twice
+        }
+    }
+    for (const KPluginMetaData &data : std::as_const(metaDataList)) {
+        if (!data.rawData().value(QStringLiteral("NoDisplay")).toBool()) {
+            KCModuleProxy *currentModuleProxy = new KCModuleProxy(data, moduleProxyParentWidget, pluginSelector_d->kcmArguments);
             if (currentModuleProxy->realModule()) {
                 moduleProxyList << currentModuleProxy;
                 if (mainWidget && !newTabWidget) {
@@ -966,7 +990,7 @@ void KPluginSelector::Private::PluginDelegate::configure(const QModelIndex &inde
                     mainWidget->setParent(newTabWidget);
                     KCModuleProxy *moduleProxy = qobject_cast<KCModuleProxy *>(mainWidget);
                     if (moduleProxy) {
-                        newTabWidget->addTab(mainWidget, moduleProxy->moduleInfo().moduleName());
+                        newTabWidget->addTab(mainWidget, data.name());
                         mainWidget = newTabWidget;
                     } else {
                         delete newTabWidget;
@@ -977,7 +1001,7 @@ void KPluginSelector::Private::PluginDelegate::configure(const QModelIndex &inde
                 }
 
                 if (newTabWidget) {
-                    newTabWidget->addTab(currentModuleProxy, servicePtr->name());
+                    newTabWidget->addTab(currentModuleProxy, pluginInfo.name());
                 } else {
                     mainWidget = currentModuleProxy;
                 }
@@ -1004,9 +1028,18 @@ void KPluginSelector::Private::PluginDelegate::configure(const QModelIndex &inde
 
         if (configDialog.exec() == QDialog::Accepted) {
             for (KCModuleProxy *moduleProxy : std::as_const(moduleProxyList)) {
-                const QStringList parentComponents = moduleProxy->moduleInfo().property(QStringLiteral("X-KDE-ParentComponents")).toStringList();
+                QStringList parentComponents;
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 88)
+                if (moduleProxy->moduleInfo().isValid()) {
+                    parentComponents = moduleProxy->moduleInfo().property(QStringLiteral("X-KDE-ParentComponents")).toStringList();
+                }
+#else
+                if (moduleProxy->metaData().isValid()) {
+                    parentComponents = moduleProxy->metaData().rawData().value(QStringLiteral("X-KDE-ParentComponents")).toVariant().toStringList();
+                }
+#endif
                 moduleProxy->save();
-                for (const QString &parentComponent : parentComponents) {
+                for (const QString &parentComponent : std::as_const(parentComponents)) {
                     Q_EMIT configCommitted(parentComponent.toLatin1());
                 }
             }
@@ -1047,3 +1080,4 @@ void KPluginSelector::Private::PluginDelegate::setHandler(std::function<QPushBut
 
 #include "moc_kpluginselector.cpp"
 #include "moc_kpluginselector_p.cpp"
+#endif

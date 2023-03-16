@@ -25,8 +25,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-22 00:14+0000\n"
-"PO-Revision-Date: 2021-06-17 13:58+0300\n"
+"POT-Creation-Date: 2021-12-30 00:40+0000\n"
+"PO-Revision-Date: 2021-08-29 19:42+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -52,61 +52,22 @@ msgstr ""
 "liehu@gmail.com, niklas.laxstrom+kdetrans@gmail.com, juippis@roskakori.org, "
 "piippo@cc.helsinki.fi, translator@legisign.org, karvonen.jorma@gmail.com"
 
-#: kcmoduleloader.cpp:68
-#, kde-format
-msgid "The module %1 could not be found."
-msgstr "Moduulia %1 ei löytynyt."
-
-#: kcmoduleloader.cpp:69
-#, kde-format
-msgid ""
-"<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
-"qt>"
-msgstr "<qt><p>Diagnoosi on:<br />Työpöytätiedostoa %1 ei löytynyt.</p></qt>"
-
-#: kcmoduleloader.cpp:75 kcmoduleloader.cpp:164
+#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:158
 #, kde-format
 msgid "The module %1 is disabled."
 msgstr "Moduuli %1 on pois käytöstä."
 
-#: kcmoduleloader.cpp:76
-#, kde-format
-msgid ""
-"<qt><p>Either the hardware/software the module configures is not available "
-"or the module has been disabled by the administrator.</p></qt>"
-msgstr ""
-"<qt><p>Moduulin määrittämää laitteistoa tai ohjelmistoa ei ole tai "
-"ylläpitäjä on poistanut moduulin käytöstä.</p></qt>"
-
-#: kcmoduleloader.cpp:99 kcmoduleloader.cpp:176
-#, kde-format
-msgid "Error loading QML file."
-msgstr "Virhe ladattaessa QML-tiedostoa."
-
-#: kcmoduleloader.cpp:107
-#, fuzzy, kde-format
-#| msgid "Error loading QML file."
-msgid "Error loading config module"
-msgstr "Virhe ladattaessa QML-tiedostoa."
-
-#: kcmoduleloader.cpp:154
-#, kde-format
-msgid "The module %1 is not a valid configuration module."
-msgstr "%1 ei ole oikeanlainen asetusmoduuli."
-
-#: kcmoduleloader.cpp:155
-#, kde-format
-msgid ""
-"<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
-"qt>"
-msgstr "<qt>Diagnoosi on:<br />Työpöytätiedosto %1 ei määritä kirjastoa. </qt>"
-
-#: kcmoduleloader.cpp:165
+#: kcmoduleloader.cpp:58
 #, kde-format
 msgid "The module has been disabled by the system administrator."
 msgstr "Järjestelmän ylläpitäjä on poistanut moduulin käytöstä."
 
-#: kcmoduleloader.cpp:213
+#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:182
+#, kde-format
+msgid "Error loading QML file."
+msgstr "Virhe ladattaessa QML-tiedostoa."
+
+#: kcmoduleloader.cpp:117
 #, kde-format
 msgid ""
 "<qt><p>Possible reasons:<ul><li>An error occurred during your last system "
@@ -122,13 +83,51 @@ msgstr ""
 "mainitsema moduuli. Jollet onnistu, ota yhteyttä jakelupaketoijaan tai "
 "paketin luojaan. </p></qt>"
 
+#: kcmoduleloader.cpp:151
+#, kde-format
+msgid "The module %1 could not be found."
+msgstr "Moduulia %1 ei löytynyt."
+
+#: kcmoduleloader.cpp:152
+#, kde-format
+msgid ""
+"<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
+"qt>"
+msgstr "<qt><p>Diagnoosi on:<br />Työpöytätiedostoa %1 ei löytynyt.</p></qt>"
+
+#: kcmoduleloader.cpp:159
+#, kde-format
+msgid ""
+"<qt><p>Either the hardware/software the module configures is not available "
+"or the module has been disabled by the administrator.</p></qt>"
+msgstr ""
+"<qt><p>Moduulin määrittämää laitteistoa tai ohjelmistoa ei ole tai "
+"ylläpitäjä on poistanut moduulin käytöstä.</p></qt>"
+
+#: kcmoduleloader.cpp:190
+#, kde-format
+msgid "Error loading config module"
+msgstr "Virhe ladattaessa asetusmoduulia"
+
+#: kcmoduleloader.cpp:234
+#, kde-format
+msgid "The module %1 is not a valid configuration module."
+msgstr "%1 ei ole oikeanlainen asetusmoduuli."
+
+#: kcmoduleloader.cpp:235
+#, kde-format
+msgid ""
+"<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
+"qt>"
+msgstr "<qt>Diagnoosi on:<br />Työpöytätiedosto %1 ei määritä kirjastoa. </qt>"
+
 #: kcmoduleproxy.cpp:105
 #, kde-format
 msgctxt "Argument is application name"
 msgid "This configuration section is already opened in %1"
 msgstr "Tämä asetusosio on jo avattu sovelluksessa %1"
 
-#: kcmultidialog.cpp:52
+#: kcmultidialog.cpp:51
 #, kde-format
 msgid ""
 "The settings of the current module have changed.\n"
@@ -137,17 +136,17 @@ msgstr ""
 "Aktiivisessa osiossa on tallentamattomia muutoksia.\n"
 "Haluatko ottaa muutokset käyttöön vai hylätäänkö ne?"
 
-#: kcmultidialog.cpp:54
+#: kcmultidialog.cpp:53
 #, kde-format
 msgid "Apply Settings"
 msgstr "Käytä asetuksia"
 
-#: kcmultidialog.cpp:245 kpluginselector.cpp:805
+#: kcmultidialog.cpp:258 kpluginselector.cpp:809 kpluginwidget.cpp:360
 #, kde-format
 msgid "Configure"
 msgstr "Asetukset"
 
-#: kpluginselector.cpp:129
+#: kpluginselector.cpp:136
 #, kde-format
 msgid ""
 "Automatic changes have been performed due to plugin dependencies. Click here "
@@ -156,7 +155,7 @@ msgstr ""
 "Tehtiin automaattisia päivityksiä johtuen liitännäisen vaatimuksista. "
 "Napsauta tästä saadaksesi lisätietoa"
 
-#: kpluginselector.cpp:197
+#: kpluginselector.cpp:204
 #, kde-format
 msgid ""
 "Automatic changes have been performed in order to satisfy plugin "
@@ -164,7 +163,7 @@ msgid ""
 msgstr ""
 "Tehtiin automaattisia muutoksia liitännäisen riippuvuuksien täyttämiseksi:\n"
 
-#: kpluginselector.cpp:203
+#: kpluginselector.cpp:210
 #, kde-format
 msgid ""
 "\n"
@@ -175,7 +174,7 @@ msgstr ""
 "    Liitännäinen %1 on otettu automaattisesti käyttöön, sillä liitännäinen "
 "%2 on siitä riippuvainen"
 
-#: kpluginselector.cpp:205
+#: kpluginselector.cpp:212
 #, kde-format
 msgid ""
 "\n"
@@ -186,36 +185,36 @@ msgstr ""
 "    Liitännäinen %1 on automaattisesti otettu pois käytöstä, koska se on "
 "riippuvainen liitännäisestä %2."
 
-#: kpluginselector.cpp:209
+#: kpluginselector.cpp:216
 #, kde-format
 msgid "Dependency Check"
 msgstr "Riippuvuustarkistus"
 
-#: kpluginselector.cpp:227
+#: kpluginselector.cpp:234
 #, kde-format
 msgid "%1 plugin automatically added due to plugin dependencies"
 msgid_plural "%1 plugins automatically added due to plugin dependencies"
 msgstr[0] "Lisättiin %1 liitännäinen riippuvuuksien takia"
 msgstr[1] "Lisättiin %1 liitännäistä riippuvuuksien takia"
 
-#: kpluginselector.cpp:231
+#: kpluginselector.cpp:238
 #, kde-format
 msgid ", "
 msgstr ", "
 
-#: kpluginselector.cpp:235
+#: kpluginselector.cpp:242
 #, kde-format
 msgid "%1 plugin automatically removed due to plugin dependencies"
 msgid_plural "%1 plugins automatically removed due to plugin dependencies"
 msgstr[0] "Poistettiin %1 liitännäinen riippuvuuksien takia"
 msgstr[1] " Poistettiin %1 liitännäistä riippuvuuksien takia"
 
-#: kpluginselector.cpp:257
+#: kpluginselector.cpp:264 kpluginwidget.cpp:57
 #, kde-format
 msgid "Search..."
 msgstr "Etsi…"
 
-#: kpluginselector.cpp:800
+#: kpluginselector.cpp:804 kpluginwidget.cpp:355
 #, kde-format
 msgid "About"
 msgstr "Tietoa"

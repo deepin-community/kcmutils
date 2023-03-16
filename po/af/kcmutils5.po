@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4 stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-22 00:14+0000\n"
+"POT-Creation-Date: 2021-12-30 00:40+0000\n"
 "PO-Revision-Date: 2006-01-12 16:33+0200\n"
 "Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -23,70 +23,24 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "frix@expertron.co.za,juanita.franz@vr-web.de "
 
-#: kcmoduleloader.cpp:68
-#, kde-format
-msgid "The module %1 could not be found."
-msgstr "Kon nie module %1 vind nie."
-
-#: kcmoduleloader.cpp:69
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>The diagnostics is:<br>The desktop file %1 could not be found.</qt>"
-msgid ""
-"<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
-"qt>"
-msgstr ""
-"<qt><p>Die diagnose is:<br>Die werkskerm lêer %1 kan nie gevind word nie.</"
-"qt>"
-
-#: kcmoduleloader.cpp:75 kcmoduleloader.cpp:164
+#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:158
 #, fuzzy, kde-format
 msgid "The module %1 is disabled."
 msgstr "Kon nie module %1 laai nie."
 
-#: kcmoduleloader.cpp:76
-#, kde-format
-msgid ""
-"<qt><p>Either the hardware/software the module configures is not available "
-"or the module has been disabled by the administrator.</p></qt>"
-msgstr ""
-
-#: kcmoduleloader.cpp:99 kcmoduleloader.cpp:176
-#, fuzzy, kde-format
-#| msgid "Error opening file."
-msgid "Error loading QML file."
-msgstr "Fout met oopmaak van lêer voorgekom"
-
-#: kcmoduleloader.cpp:107
-#, fuzzy, kde-format
-#| msgid "Error opening file."
-msgid "Error loading config module"
-msgstr "Fout met oopmaak van lêer voorgekom"
-
-#: kcmoduleloader.cpp:154
-#, kde-format
-msgid "The module %1 is not a valid configuration module."
-msgstr "Module %1 is nie 'n geldige opstel module nie."
-
-#: kcmoduleloader.cpp:155
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>The diagnostics is:<br>The desktop file %1 does not specify a "
-#| "library.</qt>"
-msgid ""
-"<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
-"qt>"
-msgstr ""
-"<qt><p>Die diagnose is:<br>Die werkskerm lêer %1 spesifiseer nie 'n "
-"biblioteek.</qt>"
-
-#: kcmoduleloader.cpp:165
+#: kcmoduleloader.cpp:58
 #, fuzzy, kde-format
 #| msgid "Please contact your system administrator."
 msgid "The module has been disabled by the system administrator."
 msgstr "Kontak asseblief die stelsel administrateur."
 
-#: kcmoduleloader.cpp:213
+#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:182
+#, fuzzy, kde-format
+#| msgid "Error opening file."
+msgid "Error loading QML file."
+msgstr "Fout met oopmaak van lêer voorgekom"
+
+#: kcmoduleloader.cpp:117
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt><p>The diagnostics is:<br>%1<p>Possible reasons:</p><ul><li>An error "
@@ -109,13 +63,59 @@ msgstr ""
 "boodskap genoem is. As dit nie help nie, oorweeg om jou verspreider of "
 "verpakker te kontak.</p></qt>"
 
+#: kcmoduleloader.cpp:151
+#, kde-format
+msgid "The module %1 could not be found."
+msgstr "Kon nie module %1 vind nie."
+
+#: kcmoduleloader.cpp:152
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt><p>The diagnostics is:<br>The desktop file %1 could not be found.</qt>"
+msgid ""
+"<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
+"qt>"
+msgstr ""
+"<qt><p>Die diagnose is:<br>Die werkskerm lêer %1 kan nie gevind word nie.</"
+"qt>"
+
+#: kcmoduleloader.cpp:159
+#, kde-format
+msgid ""
+"<qt><p>Either the hardware/software the module configures is not available "
+"or the module has been disabled by the administrator.</p></qt>"
+msgstr ""
+
+#: kcmoduleloader.cpp:190
+#, fuzzy, kde-format
+#| msgid "Error opening file."
+msgid "Error loading config module"
+msgstr "Fout met oopmaak van lêer voorgekom"
+
+#: kcmoduleloader.cpp:234
+#, kde-format
+msgid "The module %1 is not a valid configuration module."
+msgstr "Module %1 is nie 'n geldige opstel module nie."
+
+#: kcmoduleloader.cpp:235
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt><p>The diagnostics is:<br>The desktop file %1 does not specify a "
+#| "library.</qt>"
+msgid ""
+"<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
+"qt>"
+msgstr ""
+"<qt><p>Die diagnose is:<br>Die werkskerm lêer %1 spesifiseer nie 'n "
+"biblioteek.</qt>"
+
 #: kcmoduleproxy.cpp:105
 #, kde-format
 msgctxt "Argument is application name"
 msgid "This configuration section is already opened in %1"
 msgstr "Hierdie opstel afdeling is alreeds oopgemaak in %1"
 
-#: kcmultidialog.cpp:52
+#: kcmultidialog.cpp:51
 #, fuzzy, kde-format
 #| msgid ""
 #| "The document \"%1\" has been modified.\n"
@@ -127,32 +127,32 @@ msgstr ""
 "Die dokument \"%1\" het verander.\n"
 "Wil jy jou veranderinge stoor of weggooi?"
 
-#: kcmultidialog.cpp:54
+#: kcmultidialog.cpp:53
 #, fuzzy, kde-format
 #| msgid "Apply settings"
 msgid "Apply Settings"
 msgstr "Wend aan instellings"
 
-#: kcmultidialog.cpp:245 kpluginselector.cpp:805
+#: kcmultidialog.cpp:258 kpluginselector.cpp:809 kpluginwidget.cpp:360
 #, kde-format
 msgid "Configure"
 msgstr "Stel op"
 
-#: kpluginselector.cpp:129
+#: kpluginselector.cpp:136
 #, kde-format
 msgid ""
 "Automatic changes have been performed due to plugin dependencies. Click here "
 "for further information"
 msgstr ""
 
-#: kpluginselector.cpp:197
+#: kpluginselector.cpp:204
 #, kde-format
 msgid ""
 "Automatic changes have been performed in order to satisfy plugin "
 "dependencies:\n"
 msgstr ""
 
-#: kpluginselector.cpp:203
+#: kpluginselector.cpp:210
 #, kde-format
 msgid ""
 "\n"
@@ -160,7 +160,7 @@ msgid ""
 "plugin"
 msgstr ""
 
-#: kpluginselector.cpp:205
+#: kpluginselector.cpp:212
 #, kde-format
 msgid ""
 "\n"
@@ -168,38 +168,38 @@ msgid ""
 "%2 plugin"
 msgstr ""
 
-#: kpluginselector.cpp:209
+#: kpluginselector.cpp:216
 #, kde-format
 msgid "Dependency Check"
 msgstr ""
 
-#: kpluginselector.cpp:227
+#: kpluginselector.cpp:234
 #, kde-format
 msgid "%1 plugin automatically added due to plugin dependencies"
 msgid_plural "%1 plugins automatically added due to plugin dependencies"
 msgstr[0] ""
 msgstr[1] ""
 
-#: kpluginselector.cpp:231
+#: kpluginselector.cpp:238
 #, kde-format
 msgid ", "
 msgstr ""
 
-#: kpluginselector.cpp:235
+#: kpluginselector.cpp:242
 #, kde-format
 msgid "%1 plugin automatically removed due to plugin dependencies"
 msgid_plural "%1 plugins automatically removed due to plugin dependencies"
 msgstr[0] ""
 msgstr[1] ""
 
-#: kpluginselector.cpp:257
+#: kpluginselector.cpp:264 kpluginwidget.cpp:57
 #, fuzzy, kde-format
 #| msgctxt "QAccel"
 #| msgid "Search"
 msgid "Search..."
 msgstr "Soek"
 
-#: kpluginselector.cpp:800
+#: kpluginselector.cpp:804 kpluginwidget.cpp:355
 #, fuzzy, kde-format
 #| msgid "&About"
 msgid "About"
