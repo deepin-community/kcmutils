@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-22 00:14+0000\n"
+"POT-Creation-Date: 2021-12-30 00:40+0000\n"
 "PO-Revision-Date: 2011-07-16 00:57+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -31,66 +31,24 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sharuzzaman@myrealbox.com"
 
-#: kcmoduleloader.cpp:68
-#, kde-format
-msgid "The module %1 could not be found."
-msgstr "Modul %1 tidak dapat ditemui."
-
-#: kcmoduleloader.cpp:69
-#, kde-format
-msgid ""
-"<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
-"qt>"
-msgstr ""
-"<qt><p>Diagnostiknya ialah:<br />Fail desktop %1 tidak dapat ditemui.</p></"
-"qt>"
-
-#: kcmoduleloader.cpp:75 kcmoduleloader.cpp:164
+#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:158
 #, kde-format
 msgid "The module %1 is disabled."
 msgstr "Modul %1 dilumpuhkan."
 
-#: kcmoduleloader.cpp:76
-#, kde-format
-msgid ""
-"<qt><p>Either the hardware/software the module configures is not available "
-"or the module has been disabled by the administrator.</p></qt>"
-msgstr ""
-"<qt><p>Sama ada perkakasan/perisian yang modul tetapkan tiada atau modul "
-"telah dimatikan oleh pentadbir.</p></qt>"
-
-#: kcmoduleloader.cpp:99 kcmoduleloader.cpp:176
-#, fuzzy, kde-format
-#| msgid "Error loading '%1'.\n"
-msgid "Error loading QML file."
-msgstr "Ralat memuatkan '%1'.\n"
-
-#: kcmoduleloader.cpp:107
-#, fuzzy, kde-format
-#| msgid "Error loading '%1'.\n"
-msgid "Error loading config module"
-msgstr "Ralat memuatkan '%1'.\n"
-
-#: kcmoduleloader.cpp:154
-#, kde-format
-msgid "The module %1 is not a valid configuration module."
-msgstr "Modul %1 bukan modul tetapan yang sah."
-
-#: kcmoduleloader.cpp:155
-#, kde-format
-msgid ""
-"<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
-"qt>"
-msgstr ""
-"<qt>Diagnostiknya ialah:<br />Fail desktop %1 tidak menyatakan pustaka.</qt>"
-
-#: kcmoduleloader.cpp:165
+#: kcmoduleloader.cpp:58
 #, fuzzy, kde-format
 #| msgid "Please contact your system administrator."
 msgid "The module has been disabled by the system administrator."
 msgstr "Pilih hubungi pentadbir sistem anda."
 
-#: kcmoduleloader.cpp:213
+#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:182
+#, fuzzy, kde-format
+#| msgid "Error loading '%1'.\n"
+msgid "Error loading QML file."
+msgstr "Ralat memuatkan '%1'.\n"
+
+#: kcmoduleloader.cpp:117
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt><p>Possible reasons:<ul><li>An error occurred during your last KDE "
@@ -112,13 +70,55 @@ msgstr ""
 "mesej ralat. Jika ini gagal, sila hubungi pengedar atau pemakej anda.</p></"
 "qt>"
 
+#: kcmoduleloader.cpp:151
+#, kde-format
+msgid "The module %1 could not be found."
+msgstr "Modul %1 tidak dapat ditemui."
+
+#: kcmoduleloader.cpp:152
+#, kde-format
+msgid ""
+"<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
+"qt>"
+msgstr ""
+"<qt><p>Diagnostiknya ialah:<br />Fail desktop %1 tidak dapat ditemui.</p></"
+"qt>"
+
+#: kcmoduleloader.cpp:159
+#, kde-format
+msgid ""
+"<qt><p>Either the hardware/software the module configures is not available "
+"or the module has been disabled by the administrator.</p></qt>"
+msgstr ""
+"<qt><p>Sama ada perkakasan/perisian yang modul tetapkan tiada atau modul "
+"telah dimatikan oleh pentadbir.</p></qt>"
+
+#: kcmoduleloader.cpp:190
+#, fuzzy, kde-format
+#| msgid "Error loading '%1'.\n"
+msgid "Error loading config module"
+msgstr "Ralat memuatkan '%1'.\n"
+
+#: kcmoduleloader.cpp:234
+#, kde-format
+msgid "The module %1 is not a valid configuration module."
+msgstr "Modul %1 bukan modul tetapan yang sah."
+
+#: kcmoduleloader.cpp:235
+#, kde-format
+msgid ""
+"<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
+"qt>"
+msgstr ""
+"<qt>Diagnostiknya ialah:<br />Fail desktop %1 tidak menyatakan pustaka.</qt>"
+
 #: kcmoduleproxy.cpp:105
 #, kde-format
 msgctxt "Argument is application name"
 msgid "This configuration section is already opened in %1"
 msgstr "Seksyen tetapan ini sudah dibuka dalam %1"
 
-#: kcmultidialog.cpp:52
+#: kcmultidialog.cpp:51
 #, fuzzy, kde-format
 #| msgid ""
 #| "The document \"%1\" has been modified.\n"
@@ -128,17 +128,17 @@ msgid ""
 "Do you want to apply the changes or discard them?"
 msgstr "ke  atau?"
 
-#: kcmultidialog.cpp:54
+#: kcmultidialog.cpp:53
 #, kde-format
 msgid "Apply Settings"
 msgstr "Terap Tetapan"
 
-#: kcmultidialog.cpp:245 kpluginselector.cpp:805
+#: kcmultidialog.cpp:258 kpluginselector.cpp:809 kpluginwidget.cpp:360
 #, kde-format
 msgid "Configure"
 msgstr "Selaraskan"
 
-#: kpluginselector.cpp:129
+#: kpluginselector.cpp:136
 #, kde-format
 msgid ""
 "Automatic changes have been performed due to plugin dependencies. Click here "
@@ -147,7 +147,7 @@ msgstr ""
 "Perubahan automatik telah dibuat kerana kebergantungan plugin. Klik sini "
 "untuk maklumat lanjut."
 
-#: kpluginselector.cpp:197
+#: kpluginselector.cpp:204
 #, kde-format
 msgid ""
 "Automatic changes have been performed in order to satisfy plugin "
@@ -155,7 +155,7 @@ msgid ""
 msgstr ""
 "Perubahan automatik telah dibuat untuk memenuhi kebergantungan plugin:\n"
 
-#: kpluginselector.cpp:203
+#: kpluginselector.cpp:210
 #, kde-format
 msgid ""
 "\n"
@@ -165,7 +165,7 @@ msgstr ""
 "\n"
 "    %1 plugin telah diperiksa secara automaik kerana kebergantungan plugin %2"
 
-#: kpluginselector.cpp:205
+#: kpluginselector.cpp:212
 #, kde-format
 msgid ""
 "\n"
@@ -176,37 +176,37 @@ msgstr ""
 "    Plugin %1 telah dinyahtanda secara automatik kerana kebergantungannya "
 "kepada plugin %2"
 
-#: kpluginselector.cpp:209
+#: kpluginselector.cpp:216
 #, kde-format
 msgid "Dependency Check"
 msgstr "Pemeriksaan Kebergantungan"
 
-#: kpluginselector.cpp:227
+#: kpluginselector.cpp:234
 #, kde-format
 msgid "%1 plugin automatically added due to plugin dependencies"
 msgid_plural "%1 plugins automatically added due to plugin dependencies"
 msgstr[0] "%1 plugin ditambah secara automatik kerana kebergantungan plugin"
 msgstr[1] "%1 plugin ditambah secara automatik kerana kebergantungan plugin"
 
-#: kpluginselector.cpp:231
+#: kpluginselector.cpp:238
 #, kde-format
 msgid ", "
 msgstr ", "
 
-#: kpluginselector.cpp:235
+#: kpluginselector.cpp:242
 #, kde-format
 msgid "%1 plugin automatically removed due to plugin dependencies"
 msgid_plural "%1 plugins automatically removed due to plugin dependencies"
 msgstr[0] "Plugin %1 dibuang secara automatik kerana kebergantungan plugin"
 msgstr[1] "Plugin %1 dibuang secara automatik kerana kebergantungan plugin"
 
-#: kpluginselector.cpp:257
+#: kpluginselector.cpp:264 kpluginwidget.cpp:57
 #, fuzzy, kde-format
 #| msgid "Search"
 msgid "Search..."
 msgstr "Cari"
 
-#: kpluginselector.cpp:800
+#: kpluginselector.cpp:804 kpluginwidget.cpp:355
 #, fuzzy, kde-format
 #| msgid "&About"
 msgid "About"

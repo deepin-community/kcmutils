@@ -12,6 +12,10 @@
 #include <QObject>
 #include <QTest>
 
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+
 class KCModuleInfoTest : public QObject
 {
     Q_OBJECT
@@ -90,7 +94,6 @@ void KCModuleInfoTest::testDesktopFileKCM()
     QCOMPARE(QFileInfo(info.library()).fileName(), QStringLiteral("kcm_kded"));
     QCOMPARE(QFileInfo(info.fileName()).fileName(), QStringLiteral("kcmtest.desktop"));
     QCOMPARE(info.icon(), QStringLiteral("preferences-system-session-services"));
-    QCOMPARE(info.comment(), QStringLiteral("Configure background services"));
     QCOMPARE(info.docPath(), QStringLiteral("kcontrol/kded/index.html"));
 
 #if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 85)

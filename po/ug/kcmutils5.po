@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-22 00:14+0000\n"
+"POT-Creation-Date: 2021-12-30 00:40+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -28,66 +28,24 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
 
-#: kcmoduleloader.cpp:68
-#, kde-format
-msgid "The module %1 could not be found."
-msgstr "%1 بۆلەكنى تاپالمىدى"
-
-#: kcmoduleloader.cpp:69
-#, kde-format
-msgid ""
-"<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
-"qt>"
-msgstr ""
-"<qt><p>ئېنىقلاش ئۇچۇرى:<br />ئۈستەلئۈستى ھۆججىتى %1 نى تاپالمىدى.</p></qt>"
-
-#: kcmoduleloader.cpp:75 kcmoduleloader.cpp:164
+#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:158
 #, kde-format
 msgid "The module %1 is disabled."
 msgstr "%1 بۆلەك چەكلەنگەن."
 
-#: kcmoduleloader.cpp:76
-#, kde-format
-msgid ""
-"<qt><p>Either the hardware/software the module configures is not available "
-"or the module has been disabled by the administrator.</p></qt>"
-msgstr ""
-"<qt><p>بۇ بۆلەكتىكى قاتتىق دېتال ياكى يۇمشاق دېتالغا مۇناسىۋەتلىك سەپلىمىنىڭ "
-"ھەممىسىنى ئىشلەتكىلى بولمايدۇ، ياكى بۇ بۆلەكنى باشقۇرغۇچى چەكلىگەن.</p></qt>"
-
-#: kcmoduleloader.cpp:99 kcmoduleloader.cpp:176
-#, fuzzy, kde-format
-#| msgid "Error loading '%1'.\n"
-msgid "Error loading QML file."
-msgstr "'%1' يۈكلىگەندە خاتالىق كۆرۈلدى.\n"
-
-#: kcmoduleloader.cpp:107
-#, fuzzy, kde-format
-#| msgid "Error loading '%1'.\n"
-msgid "Error loading config module"
-msgstr "'%1' يۈكلىگەندە خاتالىق كۆرۈلدى.\n"
-
-#: kcmoduleloader.cpp:154
-#, kde-format
-msgid "The module %1 is not a valid configuration module."
-msgstr "%1 بۆلەك سەپلەشچان بۆلەك ئەمەس."
-
-#: kcmoduleloader.cpp:155
-#, kde-format
-msgid ""
-"<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
-"qt>"
-msgstr ""
-"<qt>ئېنىقلاش ئۇچۇرى:<br />ئۈستەلئۈستى ھۆججىتى %1 غا ئامبار بەلگىلەنمىگەن.</"
-"qt>"
-
-#: kcmoduleloader.cpp:165
+#: kcmoduleloader.cpp:58
 #, fuzzy, kde-format
 #| msgid "Please contact your system administrator."
 msgid "The module has been disabled by the system administrator."
 msgstr "سىستېما باشقۇرغۇچىسى بىلەن ئالاقىلىشىڭ."
 
-#: kcmoduleloader.cpp:213
+#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:182
+#, fuzzy, kde-format
+#| msgid "Error loading '%1'.\n"
+msgid "Error loading QML file."
+msgstr "'%1' يۈكلىگەندە خاتالىق كۆرۈلدى.\n"
+
+#: kcmoduleloader.cpp:117
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt><p>Possible reasons:<ul><li>An error occurred during your last KDE "
@@ -109,13 +67,55 @@ msgstr ""
 "ئەگەر شۇنداق قىلسىڭىزمۇ بولمىسا، تارقىتىش سودىگىرى ياكى يۇمشاق دېتالنى "
 "بوغچىلىغۇچى بىلەن ئالاقىلىشىشنى ئويلىشىڭ.</p></qt>"
 
+#: kcmoduleloader.cpp:151
+#, kde-format
+msgid "The module %1 could not be found."
+msgstr "%1 بۆلەكنى تاپالمىدى"
+
+#: kcmoduleloader.cpp:152
+#, kde-format
+msgid ""
+"<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
+"qt>"
+msgstr ""
+"<qt><p>ئېنىقلاش ئۇچۇرى:<br />ئۈستەلئۈستى ھۆججىتى %1 نى تاپالمىدى.</p></qt>"
+
+#: kcmoduleloader.cpp:159
+#, kde-format
+msgid ""
+"<qt><p>Either the hardware/software the module configures is not available "
+"or the module has been disabled by the administrator.</p></qt>"
+msgstr ""
+"<qt><p>بۇ بۆلەكتىكى قاتتىق دېتال ياكى يۇمشاق دېتالغا مۇناسىۋەتلىك سەپلىمىنىڭ "
+"ھەممىسىنى ئىشلەتكىلى بولمايدۇ، ياكى بۇ بۆلەكنى باشقۇرغۇچى چەكلىگەن.</p></qt>"
+
+#: kcmoduleloader.cpp:190
+#, fuzzy, kde-format
+#| msgid "Error loading '%1'.\n"
+msgid "Error loading config module"
+msgstr "'%1' يۈكلىگەندە خاتالىق كۆرۈلدى.\n"
+
+#: kcmoduleloader.cpp:234
+#, kde-format
+msgid "The module %1 is not a valid configuration module."
+msgstr "%1 بۆلەك سەپلەشچان بۆلەك ئەمەس."
+
+#: kcmoduleloader.cpp:235
+#, kde-format
+msgid ""
+"<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
+"qt>"
+msgstr ""
+"<qt>ئېنىقلاش ئۇچۇرى:<br />ئۈستەلئۈستى ھۆججىتى %1 غا ئامبار بەلگىلەنمىگەن.</"
+"qt>"
+
 #: kcmoduleproxy.cpp:105
 #, kde-format
 msgctxt "Argument is application name"
 msgid "This configuration section is already opened in %1"
 msgstr "بۇ سەپلىمە بۆلىكى %1 دا ئېچىلغان"
 
-#: kcmultidialog.cpp:52
+#: kcmultidialog.cpp:51
 #, kde-format
 msgid ""
 "The settings of the current module have changed.\n"
@@ -124,17 +124,17 @@ msgstr ""
 "نۆۋەتتىكى بۆلەكنىڭ تەڭشىكى ئۆزگەرتىلدى.\n"
 "ئۆزگەرتىشنى ساقلامسىز ياكى تاشلىۋېتەمسىز؟"
 
-#: kcmultidialog.cpp:54
+#: kcmultidialog.cpp:53
 #, kde-format
 msgid "Apply Settings"
 msgstr "تەڭشەك قوللان"
 
-#: kcmultidialog.cpp:245 kpluginselector.cpp:805
+#: kcmultidialog.cpp:258 kpluginselector.cpp:809 kpluginwidget.cpp:360
 #, kde-format
 msgid "Configure"
 msgstr "سەپلە"
 
-#: kpluginselector.cpp:129
+#: kpluginselector.cpp:136
 #, kde-format
 msgid ""
 "Automatic changes have been performed due to plugin dependencies. Click here "
@@ -143,7 +143,7 @@ msgstr ""
 "قىستۇرمىنىڭ بېقىندىلىق مۇناسىۋىتى سەۋەبىدىن ئىجرا قىلىش ئۆزلۈكىدىن "
 "ئۆزگەرتىلدى. بۇ جاينى چېكىپ تېخىمۇ كۆپ ئۇچۇرغا ئېرىشىڭ."
 
-#: kpluginselector.cpp:197
+#: kpluginselector.cpp:204
 #, kde-format
 msgid ""
 "Automatic changes have been performed in order to satisfy plugin "
@@ -152,7 +152,7 @@ msgstr ""
 "قىستۇرمىنىڭ بېقىندىلىق مۇناسىۋىتىنى قاندۇرۇش ئۈچۈن ئۆزگەرتىش ئۆزلۈكىدىن "
 "ئىجرا قىلىندى:\n"
 
-#: kpluginselector.cpp:203
+#: kpluginselector.cpp:210
 #, kde-format
 msgid ""
 "\n"
@@ -163,7 +163,7 @@ msgstr ""
 "    %2 قىستۇرمىنىڭ بېقىندىلىق مۇناسىۋىتى سەۋەبىدىن  %1 قىستۇرما ئۆزلۈكىدىن "
 "تاللاندى"
 
-#: kpluginselector.cpp:205
+#: kpluginselector.cpp:212
 #, kde-format
 msgid ""
 "\n"
@@ -174,24 +174,24 @@ msgstr ""
 "    %2 قىستۇرمىنىڭ بېقىندىلىق مۇناسىۋىتى سەۋەبىدىن  %1 قىستۇرما ئۆزلۈكىدىن "
 "تاللانمىدى"
 
-#: kpluginselector.cpp:209
+#: kpluginselector.cpp:216
 #, kde-format
 msgid "Dependency Check"
 msgstr "بېقىندىلىق تەكشۈرۈش"
 
-#: kpluginselector.cpp:227
+#: kpluginselector.cpp:234
 #, kde-format
 msgid "%1 plugin automatically added due to plugin dependencies"
 msgid_plural "%1 plugins automatically added due to plugin dependencies"
 msgstr[0] ""
 "قىستۇرمىنىڭ بېقىندىلىق مۇناسىۋىتى سەۋەبىدىن %1 قىستۇرما ئۆزلۈكىدىن قوشۇلدى."
 
-#: kpluginselector.cpp:231
+#: kpluginselector.cpp:238
 #, kde-format
 msgid ", "
 msgstr "، "
 
-#: kpluginselector.cpp:235
+#: kpluginselector.cpp:242
 #, kde-format
 msgid "%1 plugin automatically removed due to plugin dependencies"
 msgid_plural "%1 plugins automatically removed due to plugin dependencies"
@@ -199,13 +199,13 @@ msgstr[0] ""
 "قىستۇرمىنىڭ بېقىندىلىق مۇناسىۋىتى سەۋەبىدىن %1 قىستۇرما ئۆزلۈكىدىن "
 "چىقىرىۋېتىلدى."
 
-#: kpluginselector.cpp:257
+#: kpluginselector.cpp:264 kpluginwidget.cpp:57
 #, fuzzy, kde-format
 #| msgid "Search"
 msgid "Search..."
 msgstr "ئىزدە"
 
-#: kpluginselector.cpp:800
+#: kpluginselector.cpp:804 kpluginwidget.cpp:355
 #, fuzzy, kde-format
 #| msgid "&About"
 msgid "About"

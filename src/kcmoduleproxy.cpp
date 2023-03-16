@@ -66,11 +66,11 @@ void KCModuleProxyPrivate::loadModule()
 {
     if (!topLayout) {
         topLayout = new QVBoxLayout(parent);
-
+        QString name = metaData.pluginId();
 #if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 85)
-        QString name = modInfo.handle();
-#else
-        QString name = modInfo.library();
+        if (name.isEmpty()) {
+            name = modInfo.handle();
+        }
 #endif
         name.replace(QLatin1Char('-'), QLatin1Char('_')); // hyphen is not allowed in dbus, only [A-Z][a-z][0-9]_
         name.replace(QLatin1Char('/'), QLatin1Char('_')); // same goes for '/'
@@ -114,7 +114,9 @@ void KCModuleProxyPrivate::loadModule()
     if (metaData.isValid()) {
         kcm = KCModuleLoader::loadModule(metaData, parent, QVariantList(args.cbegin(), args.cend()));
     } else {
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 88)
         kcm = KCModuleLoader::loadModule(modInfo, KCModuleLoader::Inline, parent, args);
+#endif
     }
 
     QObject::connect(kcm, &KCModule::changed, parent, [this](bool state) {
@@ -177,7 +179,16 @@ void KCModuleProxy::showEvent(QShowEvent *ev)
 KCModuleProxy::~KCModuleProxy()
 {
     deleteClient();
-    KCModuleLoader::unloadModule(moduleInfo());
+    if (metaData().isValid()) {
+        // Do not try to unload static plugins
+        if (!metaData().isStaticPlugin()) {
+            QPluginLoader(metaData().fileName()).unload();
+        }
+    } else {
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 88)
+        KCModuleLoader::unloadModule(moduleInfo());
+#endif
+    }
 
     delete d_ptr;
 }
@@ -198,7 +209,9 @@ void KCModuleProxyPrivate::_k_moduleChanged(bool c)
     Q_Q(KCModuleProxy);
     changed = c;
     Q_EMIT q->changed(c);
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 87)
     Q_EMIT q->changed(q);
+#endif
 }
 
 void KCModuleProxyPrivate::_k_moduleDefaulted(bool d)
@@ -210,7 +223,9 @@ void KCModuleProxyPrivate::_k_moduleDefaulted(bool d)
     Q_Q(KCModuleProxy);
     defaulted = d;
     Q_EMIT q->changed(changed);
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 87)
     Q_EMIT q->changed(q);
+#endif
 }
 
 void KCModuleProxyPrivate::_k_moduleDestroyed()
@@ -218,17 +233,23 @@ void KCModuleProxyPrivate::_k_moduleDestroyed()
     kcm = nullptr;
 }
 
+KCModuleProxy::KCModuleProxy(const KPluginMetaData &metaData, QWidget *parent, const QStringList &args)
+    : QWidget(parent)
+    , d_ptr(new KCModuleProxyPrivate(this,
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 88)
+                                     KCModuleInfo(),
+#endif
+                                     args,
+                                     metaData))
+{
+}
+
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 88)
 KCModuleProxy::KCModuleProxy(const KService::Ptr &service, QWidget *parent, const QStringList &args)
     : QWidget(parent)
     , d_ptr(new KCModuleProxyPrivate(this, KCModuleInfo(service), args))
 {
     d_ptr->q_ptr = this;
-}
-
-KCModuleProxy::KCModuleProxy(const KPluginMetaData &metaData, QWidget *parent, const QStringList &args)
-    : QWidget(parent)
-    , d_ptr(new KCModuleProxyPrivate(this, KCModuleInfo(), args, metaData))
-{
 }
 
 KCModuleProxy::KCModuleProxy(const KCModuleInfo &info, QWidget *parent, const QStringList &args)
@@ -242,6 +263,7 @@ KCModuleProxy::KCModuleProxy(const QString &serviceName, QWidget *parent, const 
     , d_ptr(new KCModuleProxyPrivate(this, KCModuleInfo(serviceName), args))
 {
 }
+#endif
 
 void KCModuleProxy::load()
 {
@@ -277,7 +299,11 @@ QString KCModuleProxy::quickHelp() const
 #if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 85)
 const KAboutData *KCModuleProxy::aboutData() const
 {
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     return realModule() ? realModule()->aboutData() : nullptr;
+    QT_WARNING_POP
 }
 #endif
 
@@ -289,7 +315,15 @@ KCModule::Buttons KCModuleProxy::buttons() const
     return KCModule::Buttons(KCModule::Help | KCModule::Default | KCModule::Apply);
 }
 
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 87)
 bool KCModuleProxy::changed() const
+{
+    Q_D(const KCModuleProxy);
+    return d->changed;
+}
+#endif
+
+bool KCModuleProxy::isChanged() const
 {
     Q_D(const KCModuleProxy);
     return d->changed;
@@ -301,11 +335,13 @@ bool KCModuleProxy::defaulted() const
     return d->defaulted;
 }
 
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 88)
 KCModuleInfo KCModuleProxy::moduleInfo() const
 {
     Q_D(const KCModuleProxy);
     return d->modInfo;
 }
+#endif
 
 KPluginMetaData KCModuleProxy::metaData() const
 {

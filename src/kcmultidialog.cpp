@@ -18,7 +18,6 @@
 
 #include <QApplication>
 #include <QDesktopServices>
-#include <QDesktopWidget>
 #include <QJsonArray>
 #include <QLayout>
 #include <QProcess>
@@ -43,7 +42,7 @@
 bool KCMultiDialogPrivate::resolveChanges(KCModuleProxy *currentProxy)
 {
     Q_Q(KCMultiDialog);
-    if (!currentProxy || !currentProxy->changed()) {
+    if (!currentProxy || !currentProxy->isChanged()) {
         return true;
     }
 
@@ -133,7 +132,7 @@ void KCMultiDialogPrivate::_k_clientChanged()
     bool change = false;
     bool defaulted = false;
     if (activeModule) {
-        change = activeModule->changed();
+        change = activeModule->isChanged();
         defaulted = activeModule->defaulted();
 
         QPushButton *applyButton = q->buttonBox()->button(QDialogButtonBox::Apply);
@@ -228,13 +227,27 @@ void KCMultiDialogPrivate::_k_updateHeader(bool use, const QString &message)
     KPageWidgetItem *item = q->currentPage();
     KCModuleProxy *kcm = qobject_cast<KCModuleProxy *>(item->widget());
 
+    QString moduleName;
+    QString icon;
+
+    if (kcm->metaData().isValid()) {
+        moduleName = kcm->metaData().name();
+        icon = kcm->metaData().iconName();
+    }
+
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 88)
+    if (kcm->moduleInfo().isValid()) {
+        moduleName = kcm->moduleInfo().moduleName();
+        icon = kcm->moduleInfo().icon();
+    }
+#endif
+
     if (use) {
-        item->setHeader(QStringLiteral("<b>") + kcm->moduleInfo().moduleName() + QStringLiteral("</b><br><i>") + message + QStringLiteral("</i>"));
-        item->setIcon(
-            KIconUtils::addOverlay(QIcon::fromTheme(kcm->moduleInfo().icon()), QIcon::fromTheme(QStringLiteral("dialog-warning")), Qt::BottomRightCorner));
+        item->setHeader(QStringLiteral("<b>") + moduleName + QStringLiteral("</b><br><i>") + message + QStringLiteral("</i>"));
+        item->setIcon(KIconUtils::addOverlay(QIcon::fromTheme(icon), QIcon::fromTheme(QStringLiteral("dialog-warning")), Qt::BottomRightCorner));
     } else {
-        item->setHeader(kcm->moduleInfo().moduleName());
-        item->setIcon(QIcon::fromTheme(kcm->moduleInfo().icon()));
+        item->setHeader(moduleName);
+        item->setIcon(QIcon::fromTheme(icon));
     }
 }
 
@@ -308,11 +321,9 @@ void KCMultiDialog::showEvent(QShowEvent *ev)
      * We adjust the size after passing the show event
      * because otherwise window pos is set to (0,0)
      */
-    QScreen *screen = QApplication::screenAt(pos());
-    if (screen) {
-        const QSize maxSize = screen->availableGeometry().size();
-        resize(qMin(sizeHint().width(), maxSize.width()), qMin(sizeHint().height(), maxSize.height()));
-    }
+
+    const QSize maxSize = screen()->availableGeometry().size();
+    resize(qMin(sizeHint().width(), maxSize.width()), qMin(sizeHint().height(), maxSize.height()));
 }
 
 void KCMultiDialog::slotDefaultClicked()
@@ -367,7 +378,7 @@ void KCMultiDialogPrivate::apply()
     for (const CreatedModule &module : std::as_const(modules)) {
         KCModuleProxy *proxy = module.kcm;
 
-        if (proxy->changed()) {
+        if (proxy->isChanged()) {
             proxy->save();
 #if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 85)
             /**
@@ -422,7 +433,9 @@ void KCMultiDialog::slotHelpClicked()
     QString docPath;
     for (int i = 0; i < d->modules.count(); ++i) {
         if (d->modules[i].item == item) {
+#if KCMUTILS_BUILD_DEPRECATED_SINCE(5, 88)
             docPath = d->modules[i].kcm->moduleInfo().docPath();
+#endif
             if (docPath.isEmpty()) {
                 docPath = d->modules[i].kcm->metaData().value(QStringLiteral("X-DocPath"));
             }

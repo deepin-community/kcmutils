@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-22 00:14+0000\n"
+"POT-Creation-Date: 2021-12-02 00:40+0000\n"
 "PO-Revision-Date: 2014-11-05 13:40+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -36,60 +36,22 @@ msgid "Your emails"
 msgstr ""
 "knut.yrvin@gmail.com,fri_programvare@bojer.no,bjornst@skogkatt.homelinux.org"
 
-#: kcmoduleloader.cpp:68
-#, kde-format
-msgid "The module %1 could not be found."
-msgstr "Fant ikke modulen %1."
-
-#: kcmoduleloader.cpp:69
-#, kde-format
-msgid ""
-"<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
-"qt>"
-msgstr "<qt><p>Diagnosen er:<br />Skrivebordfila %1 ble ikke funnet.</p></qt>"
-
-#: kcmoduleloader.cpp:75 kcmoduleloader.cpp:164
+#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:142
 #, kde-format
 msgid "The module %1 is disabled."
 msgstr "Modulen %1 er slått av."
 
-#: kcmoduleloader.cpp:76
-#, kde-format
-msgid ""
-"<qt><p>Either the hardware/software the module configures is not available "
-"or the module has been disabled by the administrator.</p></qt>"
-msgstr ""
-"<qt><p>Enten er maskin/programvaren som modulen setter opp ikke "
-"tilgjengelig, eller administrator har slått av modulen.</p></qt>"
-
-#: kcmoduleloader.cpp:99 kcmoduleloader.cpp:176
-#, kde-format
-msgid "Error loading QML file."
-msgstr ""
-
-#: kcmoduleloader.cpp:107
-#, kde-format
-msgid "Error loading config module"
-msgstr ""
-
-#: kcmoduleloader.cpp:154
-#, kde-format
-msgid "The module %1 is not a valid configuration module."
-msgstr "Modulen %1 er ikke en gyldig oppsettsmodul."
-
-#: kcmoduleloader.cpp:155
-#, kde-format
-msgid ""
-"<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
-"qt>"
-msgstr "<qt>Diagnosen er: <br />Skrivebordsfila %1 er ikke et bibliotek. </qt>"
-
-#: kcmoduleloader.cpp:165
+#: kcmoduleloader.cpp:58
 #, kde-format
 msgid "The module has been disabled by the system administrator."
 msgstr ""
 
-#: kcmoduleloader.cpp:213
+#: kcmoduleloader.cpp:85 kcmoduleloader.cpp:166
+#, kde-format
+msgid "Error loading QML file."
+msgstr ""
+
+#: kcmoduleloader.cpp:104
 #, kde-format
 msgid ""
 "<qt><p>Possible reasons:<ul><li>An error occurred during your last system "
@@ -98,6 +60,44 @@ msgid ""
 "carefully and try to remove the module mentioned in the error message. If "
 "this fails, consider contacting your distributor or packager.</p></qt>"
 msgstr ""
+
+#: kcmoduleloader.cpp:135
+#, kde-format
+msgid "The module %1 could not be found."
+msgstr "Fant ikke modulen %1."
+
+#: kcmoduleloader.cpp:136
+#, kde-format
+msgid ""
+"<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
+"qt>"
+msgstr "<qt><p>Diagnosen er:<br />Skrivebordfila %1 ble ikke funnet.</p></qt>"
+
+#: kcmoduleloader.cpp:143
+#, kde-format
+msgid ""
+"<qt><p>Either the hardware/software the module configures is not available "
+"or the module has been disabled by the administrator.</p></qt>"
+msgstr ""
+"<qt><p>Enten er maskin/programvaren som modulen setter opp ikke "
+"tilgjengelig, eller administrator har slått av modulen.</p></qt>"
+
+#: kcmoduleloader.cpp:174
+#, kde-format
+msgid "Error loading config module"
+msgstr ""
+
+#: kcmoduleloader.cpp:221
+#, kde-format
+msgid "The module %1 is not a valid configuration module."
+msgstr "Modulen %1 er ikke en gyldig oppsettsmodul."
+
+#: kcmoduleloader.cpp:222
+#, kde-format
+msgid ""
+"<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
+"qt>"
+msgstr "<qt>Diagnosen er: <br />Skrivebordsfila %1 er ikke et bibliotek. </qt>"
 
 #: kcmoduleproxy.cpp:105
 #, kde-format
@@ -119,7 +119,7 @@ msgstr ""
 msgid "Apply Settings"
 msgstr "Ta i bruk endringer"
 
-#: kcmultidialog.cpp:245 kpluginselector.cpp:805
+#: kcmultidialog.cpp:259 kpluginselector.cpp:802 kpluginwidget.cpp:360
 #, kde-format
 msgid "Configure"
 msgstr "Oppsett"
@@ -196,12 +196,12 @@ msgstr[1] ""
 "%1 programtillegg fjernet automatisk på grunn av avhengigheter mellom "
 "programtillegg"
 
-#: kpluginselector.cpp:257
+#: kpluginselector.cpp:257 kpluginwidget.cpp:57
 #, kde-format
 msgid "Search..."
 msgstr ""
 
-#: kpluginselector.cpp:800
+#: kpluginselector.cpp:797 kpluginwidget.cpp:355
 #, kde-format
 msgid "About"
 msgstr "Om"

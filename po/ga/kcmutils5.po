@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-22 00:14+0000\n"
+"POT-Creation-Date: 2021-12-30 00:40+0000\n"
 "PO-Revision-Date: 2004-12-14 09:11-0600\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -30,64 +30,24 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "seoc@iolfree.ie,kscanne@gmail.com,s_oceallaigh@yahoo.com"
 
-#: kcmoduleloader.cpp:68
-#, kde-format
-msgid "The module %1 could not be found."
-msgstr "Níorbh fhéidir modúl %1 a aimsiú."
-
-#: kcmoduleloader.cpp:69
-#, kde-format
-msgid ""
-"<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
-"qt>"
-msgstr ""
-"<qt><p>Diagnóisic:<br />Níorbh fhéidir comhad deisce %1 a aimsiú.</p></qt>"
-
-#: kcmoduleloader.cpp:75 kcmoduleloader.cpp:164
+#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:158
 #, kde-format
 msgid "The module %1 is disabled."
 msgstr "Díchumasaíodh modúl %1."
 
-#: kcmoduleloader.cpp:76
-#, kde-format
-msgid ""
-"<qt><p>Either the hardware/software the module configures is not available "
-"or the module has been disabled by the administrator.</p></qt>"
-msgstr ""
-"<qt><p>Níl na crua-earraí/bogearraí a chumraíonn an modúl ar fáil, nó "
-"dhíchumasaigh riarthóir an chórais an modúl.</p></qt>"
-
-#: kcmoduleloader.cpp:99 kcmoduleloader.cpp:176
-#, fuzzy, kde-format
-#| msgid "Error opening file."
-msgid "Error loading QML file."
-msgstr "Earráid le linn oscailte."
-
-#: kcmoduleloader.cpp:107
-#, fuzzy, kde-format
-#| msgid "Error opening file."
-msgid "Error loading config module"
-msgstr "Earráid le linn oscailte."
-
-#: kcmoduleloader.cpp:154
-#, kde-format
-msgid "The module %1 is not a valid configuration module."
-msgstr "Níl %1 ina mhodúl bailí cumraíochta."
-
-#: kcmoduleloader.cpp:155
-#, kde-format
-msgid ""
-"<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
-"qt>"
-msgstr "<qt>Diagnóisic:<br />Ní shonraíonn comhad deisce %1 leabharlann.</qt>"
-
-#: kcmoduleloader.cpp:165
+#: kcmoduleloader.cpp:58
 #, fuzzy, kde-format
 #| msgid "Please contact your system administrator."
 msgid "The module has been disabled by the system administrator."
 msgstr "Téigh i dteagmháil le riarthóir do chórais, le do thoil."
 
-#: kcmoduleloader.cpp:213
+#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:182
+#, fuzzy, kde-format
+#| msgid "Error opening file."
+msgid "Error loading QML file."
+msgstr "Earráid le linn oscailte."
+
+#: kcmoduleloader.cpp:117
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt><p>Possible reasons:<ul><li>An error occurred during your last KDE "
@@ -109,13 +69,53 @@ msgstr ""
 "earráide a bhaint. Mura n-éiríonn leis seo, téigh i dteagmháil le do "
 "dháileoir nó le do phacáisteoir.</p></qt>"
 
+#: kcmoduleloader.cpp:151
+#, kde-format
+msgid "The module %1 could not be found."
+msgstr "Níorbh fhéidir modúl %1 a aimsiú."
+
+#: kcmoduleloader.cpp:152
+#, kde-format
+msgid ""
+"<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
+"qt>"
+msgstr ""
+"<qt><p>Diagnóisic:<br />Níorbh fhéidir comhad deisce %1 a aimsiú.</p></qt>"
+
+#: kcmoduleloader.cpp:159
+#, kde-format
+msgid ""
+"<qt><p>Either the hardware/software the module configures is not available "
+"or the module has been disabled by the administrator.</p></qt>"
+msgstr ""
+"<qt><p>Níl na crua-earraí/bogearraí a chumraíonn an modúl ar fáil, nó "
+"dhíchumasaigh riarthóir an chórais an modúl.</p></qt>"
+
+#: kcmoduleloader.cpp:190
+#, fuzzy, kde-format
+#| msgid "Error opening file."
+msgid "Error loading config module"
+msgstr "Earráid le linn oscailte."
+
+#: kcmoduleloader.cpp:234
+#, kde-format
+msgid "The module %1 is not a valid configuration module."
+msgstr "Níl %1 ina mhodúl bailí cumraíochta."
+
+#: kcmoduleloader.cpp:235
+#, kde-format
+msgid ""
+"<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
+"qt>"
+msgstr "<qt>Diagnóisic:<br />Ní shonraíonn comhad deisce %1 leabharlann.</qt>"
+
 #: kcmoduleproxy.cpp:105
 #, kde-format
 msgctxt "Argument is application name"
 msgid "This configuration section is already opened in %1"
 msgstr "Tá an t-alt cumraíochta oscailte cheana i %1"
 
-#: kcmultidialog.cpp:52
+#: kcmultidialog.cpp:51
 #, kde-format
 msgid ""
 "The settings of the current module have changed.\n"
@@ -124,17 +124,17 @@ msgstr ""
 "Athraíodh socruithe an mhodúil reatha.\n"
 "An bhfuil fonn ort na hathruithe a chur i bhfeidhm?"
 
-#: kcmultidialog.cpp:54
+#: kcmultidialog.cpp:53
 #, kde-format
 msgid "Apply Settings"
 msgstr "Cuir na socruithe i bhfeidhm"
 
-#: kcmultidialog.cpp:245 kpluginselector.cpp:805
+#: kcmultidialog.cpp:258 kpluginselector.cpp:809 kpluginwidget.cpp:360
 #, kde-format
 msgid "Configure"
 msgstr "Cumraigh"
 
-#: kpluginselector.cpp:129
+#: kpluginselector.cpp:136
 #, kde-format
 msgid ""
 "Automatic changes have been performed due to plugin dependencies. Click here "
@@ -143,7 +143,7 @@ msgstr ""
 "Rinneadh athruithe uathoibríocha de bharr spleáchais an bhreiseáin. Cliceáil "
 "anseo chun tuilleadh eolais a fháil"
 
-#: kpluginselector.cpp:197
+#: kpluginselector.cpp:204
 #, kde-format
 msgid ""
 "Automatic changes have been performed in order to satisfy plugin "
@@ -151,7 +151,7 @@ msgid ""
 msgstr ""
 "Rinneadh athruithe uathoibríocha chun spleáchais an bhreiseáin a shásamh:\n"
 
-#: kpluginselector.cpp:203
+#: kpluginselector.cpp:210
 #, kde-format
 msgid ""
 "\n"
@@ -161,7 +161,7 @@ msgstr ""
 "\n"
 "    Cuireadh tic le breiseán %1 go huathoibríoch de bharr an spleáchais %2"
 
-#: kpluginselector.cpp:205
+#: kpluginselector.cpp:212
 #, kde-format
 msgid ""
 "\n"
@@ -172,12 +172,12 @@ msgstr ""
 "    Baineadh an tic ó bhreiseán %1 go huathoibríoch de bharr a spleáchais ar "
 "bhreiseán %2"
 
-#: kpluginselector.cpp:209
+#: kpluginselector.cpp:216
 #, kde-format
 msgid "Dependency Check"
 msgstr "Seiceáil Spleáchas"
 
-#: kpluginselector.cpp:227
+#: kpluginselector.cpp:234
 #, kde-format
 msgid "%1 plugin automatically added due to plugin dependencies"
 msgid_plural "%1 plugins automatically added due to plugin dependencies"
@@ -187,12 +187,12 @@ msgstr[2] "Cuireadh %1 bhreiseán leis go huathoibríoch de bharr spleáchas"
 msgstr[3] "Cuireadh %1 mbreiseán leis go huathoibríoch de bharr spleáchas"
 msgstr[4] "Cuireadh %1 breiseán leis go huathoibríoch de bharr spleáchas"
 
-#: kpluginselector.cpp:231
+#: kpluginselector.cpp:238
 #, kde-format
 msgid ", "
 msgstr ", "
 
-#: kpluginselector.cpp:235
+#: kpluginselector.cpp:242
 #, kde-format
 msgid "%1 plugin automatically removed due to plugin dependencies"
 msgid_plural "%1 plugins automatically removed due to plugin dependencies"
@@ -202,13 +202,13 @@ msgstr[2] "Baineadh %1 bhreiseán go huathoibríoch de bharr spleáchas"
 msgstr[3] "Baineadh %1 mbreiseán go huathoibríoch de bharr spleáchas"
 msgstr[4] "Baineadh %1 breiseán go huathoibríoch de bharr spleáchas"
 
-#: kpluginselector.cpp:257
+#: kpluginselector.cpp:264 kpluginwidget.cpp:57
 #, fuzzy, kde-format
 #| msgid "Search"
 msgid "Search..."
 msgstr "Cuardaigh"
 
-#: kpluginselector.cpp:800
+#: kpluginselector.cpp:804 kpluginwidget.cpp:355
 #, fuzzy, kde-format
 #| msgid "&About"
 msgid "About"

@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.78.0 amd64 arm64 armel armhf i386 mipsel ppc64el s390x
+# SymbolsHelper-Confirmed: 5.90.0 armel armhf i386 mipsel powerpc x32
 libKF5KCMUtils.so.5 libkf5kcmutils5 #MINVER#
 * Build-Depends-Package: libkf5kcmutils-dev
  _ZN12KCModuleData11aboutToLoadENS_14QPrivateSignalE@Base 5.82.0
@@ -42,9 +42,11 @@ libKF5KCMUtils.so.5 libkf5kcmutils5 #MINVER#
  _ZN13KCModuleProxy8defaultsEv@Base 4.96.0
  _ZN13KCModuleProxy9showEventEP10QShowEvent@Base 4.96.0
  _ZN13KCModuleProxyC1ERK12KCModuleInfoP7QWidgetRK11QStringList@Base 4.96.0
+ _ZN13KCModuleProxyC1ERK15KPluginMetaDataP7QWidgetRK11QStringList@Base 5.90.0
  _ZN13KCModuleProxyC1ERK28QExplicitlySharedDataPointerI8KServiceEP7QWidgetRK11QStringList@Base 4.96.0
  _ZN13KCModuleProxyC1ERK7QStringP7QWidgetRK11QStringList@Base 4.96.0
  _ZN13KCModuleProxyC2ERK12KCModuleInfoP7QWidgetRK11QStringList@Base 4.96.0
+ _ZN13KCModuleProxyC2ERK15KPluginMetaDataP7QWidgetRK11QStringList@Base 5.90.0
  _ZN13KCModuleProxyC2ERK28QExplicitlySharedDataPointerI8KServiceEP7QWidgetRK11QStringList@Base 4.96.0
  _ZN13KCModuleProxyC2ERK7QStringP7QWidgetRK11QStringList@Base 4.96.0
  _ZN13KCModuleProxyD0Ev@Base 4.96.0
@@ -63,6 +65,8 @@ libKF5KCMUtils.so.5 libkf5kcmutils5 #MINVER#
  _ZN13KCMultiDialog18slotDefaultClickedEv@Base 4.96.0
  _ZN13KCMultiDialog5clearEv@Base 4.96.0
  _ZN13KCMultiDialog9addModuleERK12KCModuleInfoP15KPageWidgetItemRK11QStringList@Base 4.96.0
+ _ZN13KCMultiDialog9addModuleERK15KPluginMetaData@Base 5.90.0
+ _ZN13KCMultiDialog9addModuleERK15KPluginMetaDataRK11QStringList@Base 5.90.0
  _ZN13KCMultiDialog9addModuleERK7QStringRK11QStringList@Base 4.96.0
  _ZN13KCMultiDialog9showEventEP10QShowEvent@Base 5.2.0+git20141003
  _ZN13KCMultiDialogC1EP11KPageWidgetP7QWidget6QFlagsIN2Qt10WindowTypeEE@Base 4.96.0
@@ -74,8 +78,30 @@ libKF5KCMUtils.so.5 libkf5kcmutils5 #MINVER#
  _ZN13KCMultiDialogD0Ev@Base 4.96.0
  _ZN13KCMultiDialogD1Ev@Base 4.96.0
  _ZN13KCMultiDialogD2Ev@Base 4.96.0
+ _ZN13KPluginWidget10addPluginsERK7QVectorI15KPluginMetaDataERK7QString@Base 5.90.0
+ _ZN13KPluginWidget11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.90.0
+ _ZN13KPluginWidget11qt_metacastEPKc@Base 5.90.0
+ _ZN13KPluginWidget16staticMetaObjectE@Base 5.90.0
+ _ZN13KPluginWidget17pluginConfigSavedERK7QString@Base 5.90.0
+ _ZN13KPluginWidget17showConfigurationERK7QString@Base 5.90.0
+ _ZN13KPluginWidget20pluginEnabledChangedERK7QStringb@Base 5.90.0
+ _ZN13KPluginWidget25setConfigurationArgumentsERK11QStringList@Base 5.90.0
+ _ZN13KPluginWidget26setAdditionalButtonHandlerERKSt8functionIFP11QPushButtonRK15KPluginMetaDataEE@Base 5.90.0
+ _ZN13KPluginWidget28setDefaultsIndicatorsVisibleEb@Base 5.90.0
+ _ZN13KPluginWidget4saveEv@Base 5.90.0
+ _ZN13KPluginWidget5clearEv@Base 5.90.0
+ _ZN13KPluginWidget7changedEb@Base 5.90.0
+ _ZN13KPluginWidget8defaultsEv@Base 5.90.0
+ _ZN13KPluginWidget9defaultedEb@Base 5.90.0
+ _ZN13KPluginWidget9setConfigERK12KConfigGroup@Base 5.90.0
+ _ZN13KPluginWidgetC1EP7QWidget@Base 5.90.0
+ _ZN13KPluginWidgetC2EP7QWidget@Base 5.90.0
+ _ZN13KPluginWidgetD0Ev@Base 5.90.0
+ _ZN13KPluginWidgetD1Ev@Base 5.90.0
+ _ZN13KPluginWidgetD2Ev@Base 5.90.0
  _ZN14KCModuleLoader10isDefaultsERK12KCModuleInfoRK11QStringList@Base 5.74.0
  _ZN14KCModuleLoader10loadModuleERK12KCModuleInfoNS_14ErrorReportingEP7QWidgetRK11QStringList@Base 4.96.0
+ _ZN14KCModuleLoader10loadModuleERK15KPluginMetaDataP7QWidgetRK5QListI8QVariantE@Base 5.90.0
  _ZN14KCModuleLoader10loadModuleERK7QStringNS_14ErrorReportingEP7QWidgetRK11QStringList@Base 4.96.0
  _ZN14KCModuleLoader11reportErrorENS_14ErrorReportingERK7QStringS3_P7QWidget@Base 4.96.0
  _ZN14KCModuleLoader12unloadModuleERK12KCModuleInfo@Base 4.96.0
@@ -179,10 +205,16 @@ libKF5KCMUtils.so.5 libkf5kcmutils5 #MINVER#
  _ZNK13KCModuleProxy7buttonsEv@Base 4.96.0
  _ZNK13KCModuleProxy7changedEv@Base 4.96.0
  _ZNK13KCModuleProxy8dbusPathEv@Base 4.96.0
+ _ZNK13KCModuleProxy8metaDataEv@Base 5.90.0
  _ZNK13KCModuleProxy9aboutDataEv@Base 4.96.0
  _ZNK13KCModuleProxy9defaultedEv@Base 5.69.0
+ _ZNK13KCModuleProxy9isChangedEv@Base 5.90.0
  _ZNK13KCModuleProxy9quickHelpEv@Base 4.96.0
  _ZNK13KCMultiDialog10metaObjectEv@Base 4.96.0
+ _ZNK13KPluginWidget10metaObjectEv@Base 5.90.0
+ _ZNK13KPluginWidget12isSaveNeededEv@Base 5.90.0
+ _ZNK13KPluginWidget22configurationArgumentsEv@Base 5.90.0
+ _ZNK13KPluginWidget9isDefaultEv@Base 5.90.0
  _ZNK15KPluginSelector10metaObjectEv@Base 4.96.0
  _ZNK15KPluginSelector12isSaveNeededEv@Base 5.78.0
  _ZNK15KPluginSelector22configurationArgumentsEv@Base 5.8.0+git20150316.0112+15.04
@@ -195,6 +227,7 @@ libKF5KCMUtils.so.5 libkf5kcmutils5 #MINVER#
  _ZTI12KCModuleData@Base 5.74.0
  _ZTI13KCModuleProxy@Base 4.96.0
  _ZTI13KCMultiDialog@Base 4.96.0
+ _ZTI13KPluginWidget@Base 5.90.0
  _ZTI15KPluginSelector@Base 4.96.0
  _ZTI17KCModuleContainer@Base 4.96.0
  _ZTIN9KSettings10PluginPageE@Base 4.96.0
@@ -202,6 +235,7 @@ libKF5KCMUtils.so.5 libkf5kcmutils5 #MINVER#
  _ZTS12KCModuleData@Base 5.74.0
  _ZTS13KCModuleProxy@Base 4.96.0
  _ZTS13KCMultiDialog@Base 4.96.0
+ _ZTS13KPluginWidget@Base 5.90.0
  _ZTS15KPluginSelector@Base 4.96.0
  _ZTS17KCModuleContainer@Base 4.96.0
  _ZTSN9KSettings10PluginPageE@Base 4.96.0
@@ -209,13 +243,17 @@ libKF5KCMUtils.so.5 libkf5kcmutils5 #MINVER#
  _ZTV12KCModuleData@Base 5.74.0
  _ZTV13KCModuleProxy@Base 4.96.0
  _ZTV13KCMultiDialog@Base 4.96.0
+ _ZTV13KPluginWidget@Base 5.90.0
  _ZTV15KPluginSelector@Base 4.96.0
  _ZTV17KCModuleContainer@Base 4.96.0
  _ZTVN9KSettings10PluginPageE@Base 4.96.0
  _ZTVN9KSettings6DialogE@Base 4.96.0
+ _ZZZN14KPluginFactory17instantiatePluginI12KCModuleDataEENS_6ResultIT_EERK15KPluginMetaDataP7QObjectRK5QListI8QVariantEENKUlvE_clEvE15qstring_literal@Base 5.90.0
+ _ZZZN14KPluginFactory17instantiatePluginIN12KQuickAddons12ConfigModuleEEENS_6ResultIT_EERK15KPluginMetaDataP7QObjectRK5QListI8QVariantEENKUlvE_clEvE15qstring_literal@Base 5.90.0
  (c++)"non-virtual thunk to KCModuleContainer::~KCModuleContainer()@Base" 4.96.0
  (c++)"non-virtual thunk to KCModuleProxy::~KCModuleProxy()@Base" 4.96.0
  (c++)"non-virtual thunk to KCMultiDialog::~KCMultiDialog()@Base" 4.96.0
  (c++)"non-virtual thunk to KPluginSelector::~KPluginSelector()@Base" 4.96.0
+ (c++)"non-virtual thunk to KPluginWidget::~KPluginWidget()@Base" 5.90.0
  (c++)"non-virtual thunk to KSettings::Dialog::~Dialog()@Base" 4.96.0
  (c++)"non-virtual thunk to KSettings::PluginPage::~PluginPage()@Base" 4.96.0
