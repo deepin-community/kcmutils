@@ -1,9 +1,3 @@
-kcmutils (5.90.0-2deepin) unstable; urgency=medium
-
-  * Regulate version name
-
- -- Yutao Meng <mengyutao@uniontech.com>  Tue, 21 Mar 2023 14:27:28 +0800
-
 kcmutils (5.90.0-2) unstable; urgency=medium
 
   * update
