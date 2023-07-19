@@ -23,21 +23,20 @@
 #include <QProcess>
 #include <QPushButton>
 #include <QScreen>
+#include <QStandardPaths>
 #include <QStringList>
 #include <QStyle>
 #include <QUrl>
 
-#ifndef KCONFIGWIDGETS_NO_KAUTH
-#include <KAuthAction>
-#include <KAuthObjectDecorator>
+#if KCONFIGWIDGETS_WITH_KAUTH
+#include <KAuth/Action>
+#include <KAuth/ObjectDecorator>
 #endif
 #include <KGuiItem>
 #include <KIconUtils>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KPageWidgetModel>
-#include <KPluginInfo>
-#include <KPluginMetaData>
 
 bool KCMultiDialogPrivate::resolveChanges(KCModuleProxy *currentProxy)
 {
@@ -47,19 +46,19 @@ bool KCMultiDialogPrivate::resolveChanges(KCModuleProxy *currentProxy)
     }
 
     // Let the user decide
-    const int queryUser = KMessageBox::warningYesNoCancel(q,
-                                                          i18n("The settings of the current module have changed.\n"
-                                                               "Do you want to apply the changes or discard them?"),
-                                                          i18n("Apply Settings"),
-                                                          KStandardGuiItem::apply(),
-                                                          KStandardGuiItem::discard(),
-                                                          KStandardGuiItem::cancel());
+    const int queryUser = KMessageBox::warningTwoActionsCancel(q,
+                                                               i18n("The settings of the current module have changed.\n"
+                                                                    "Do you want to apply the changes or discard them?"),
+                                                               i18n("Apply Settings"),
+                                                               KStandardGuiItem::apply(),
+                                                               KStandardGuiItem::discard(),
+                                                               KStandardGuiItem::cancel());
 
     switch (queryUser) {
-    case KMessageBox::Yes:
+    case KMessageBox::PrimaryAction:
         return moduleSave(currentProxy);
 
-    case KMessageBox::No:
+    case KMessageBox::SecondaryAction:
         currentProxy->load();
         return true;
 
@@ -138,7 +137,7 @@ void KCMultiDialogPrivate::_k_clientChanged()
         QPushButton *applyButton = q->buttonBox()->button(QDialogButtonBox::Apply);
         if (applyButton) {
             q->disconnect(applyButton, &QAbstractButton::clicked, q, &KCMultiDialog::slotApplyClicked);
-#ifndef KCONFIGWIDGETS_NO_KAUTH
+#if KCONFIGWIDGETS_WITH_KAUTH
             delete applyButton->findChild<KAuth::ObjectDecorator *>();
 #endif
         }
@@ -146,12 +145,12 @@ void KCMultiDialogPrivate::_k_clientChanged()
         QPushButton *okButton = q->buttonBox()->button(QDialogButtonBox::Ok);
         if (okButton) {
             q->disconnect(okButton, &QAbstractButton::clicked, q, &KCMultiDialog::slotOkClicked);
-#ifndef KCONFIGWIDGETS_NO_KAUTH
+#if KCONFIGWIDGETS_WITH_KAUTH
             delete okButton->findChild<KAuth::ObjectDecorator *>();
 #endif
         }
 
-#ifndef KCONFIGWIDGETS_NO_KAUTH
+#if KCONFIGWIDGETS_WITH_KAUTH
         if (activeModule->realModule()->needsAuthorization()) {
             if (applyButton) {
                 KAuth::ObjectDecorator *decorator = new KAuth::ObjectDecorator(applyButton);
@@ -445,8 +444,13 @@ void KCMultiDialog::slotHelpClicked()
 
     const QUrl docUrl = QUrl(QStringLiteral("help:/")).resolved(QUrl(docPath)); // same code as in KHelpClient::invokeHelp
     const QString docUrlScheme = docUrl.scheme();
-    if (docUrlScheme == QLatin1String("man") || docUrlScheme == QLatin1String("info")) {
-        QProcess::startDetached(QStringLiteral("khelpcenter"), QStringList() << docUrl.toString());
+    const QString helpExec = QStandardPaths::findExecutable(QStringLiteral("khelpcenter"));
+    const bool foundExec = !helpExec.isEmpty();
+    if (!foundExec) {
+        qCDebug(KCMUTILS_LOG) << "Couldn't find khelpcenter executable in PATH.";
+    }
+    if (foundExec && (docUrlScheme == QLatin1String("man") || docUrlScheme == QLatin1String("info"))) {
+        QProcess::startDetached(helpExec, QStringList() << docUrl.toString());
     } else {
         QDesktopServices::openUrl(docUrl);
     }
@@ -674,7 +678,6 @@ void KCMultiDialog::clear()
 
     for (int i = 0; i < d->modules.count(); ++i) {
         removePage(d->modules[i].item);
-        delete d->modules[i].kcm;
     }
 
     d->modules.clear();

@@ -2,22 +2,22 @@
 #
 # Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 2003, 2004, 2005, 2006.
 # Håvard Korsvoll <korsvoll@skulelinux.no>, 2003, 2005.
-# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2019, 2020, 2021.
+# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2019, 2020, 2021, 2022.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2009, 2010.
-# Oystein Steffensen-Alvaervik <ystein@posteo.net>, 2021.
+# Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-02 00:40+0000\n"
-"PO-Revision-Date: 2021-12-15 11:59+0100\n"
-"Last-Translator: Oystein Steffensen-Alvaervik <ystein@posteo.net>\n"
+"POT-Creation-Date: 2022-12-07 00:43+0000\n"
+"PO-Revision-Date: 2022-06-18 23:41+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 22.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -33,7 +33,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "gaute@verdsveven.com,karl@huftis.org"
 
-#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:142
+#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:160
 #, kde-format
 msgid "The module %1 is disabled."
 msgstr "Modulen %1 er slått av."
@@ -43,12 +43,12 @@ msgstr "Modulen %1 er slått av."
 msgid "The module has been disabled by the system administrator."
 msgstr "Denne modulen er slått av av systemadministratoren."
 
-#: kcmoduleloader.cpp:85 kcmoduleloader.cpp:166
+#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:184
 #, kde-format
 msgid "Error loading QML file."
 msgstr "Feil ved lasting av QML-fil."
 
-#: kcmoduleloader.cpp:104
+#: kcmoduleloader.cpp:119
 #, kde-format
 msgid ""
 "<qt><p>Possible reasons:<ul><li>An error occurred during your last system "
@@ -64,19 +64,19 @@ msgstr ""
 "lukkast, kan du vurdera å kontakta distributøren din eller pakkebyggjaren.</"
 "p></qt>"
 
-#: kcmoduleloader.cpp:135
+#: kcmoduleloader.cpp:153
 #, kde-format
 msgid "The module %1 could not be found."
 msgstr "Fann ikkje modulen %1."
 
-#: kcmoduleloader.cpp:136
+#: kcmoduleloader.cpp:154
 #, kde-format
 msgid ""
 "<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
 "qt>"
 msgstr "<qt><p>Diagnosen er:<br/>Fann ikkje skrivebordsfila «%1».</p></qt>"
 
-#: kcmoduleloader.cpp:143
+#: kcmoduleloader.cpp:161
 #, kde-format
 msgid ""
 "<qt><p>Either the hardware/software the module configures is not available "
@@ -85,17 +85,17 @@ msgstr ""
 "<qt><p>Anten er maskinvara/programvara modulen set opp utilgjengeleg eller "
 "modulen er slått av av ein administrator.</p></qt>"
 
-#: kcmoduleloader.cpp:174
+#: kcmoduleloader.cpp:192
 #, kde-format
 msgid "Error loading config module"
 msgstr "Feil ved lasting av oppsettsmodulen"
 
-#: kcmoduleloader.cpp:221
+#: kcmoduleloader.cpp:236
 #, kde-format
 msgid "The module %1 is not a valid configuration module."
 msgstr "Modulen %1 er ingen gyldig oppsettsmodul."
 
-#: kcmoduleloader.cpp:222
+#: kcmoduleloader.cpp:237
 #, kde-format
 msgid ""
 "<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
@@ -104,13 +104,13 @@ msgstr ""
 "<qt>Diagnosen er: <br />Skrivebordsfila %1 oppgjev ikkje noko bibliotek. </"
 "qt>"
 
-#: kcmoduleproxy.cpp:105
+#: kcmoduleproxy.cpp:108
 #, kde-format
 msgctxt "Argument is application name"
 msgid "This configuration section is already opened in %1"
 msgstr "Dette oppsettet er alt ope i %1."
 
-#: kcmultidialog.cpp:52
+#: kcmultidialog.cpp:50
 #, kde-format
 msgid ""
 "The settings of the current module have changed.\n"
@@ -119,17 +119,17 @@ msgstr ""
 "Innstillingane i denne modulen er endra.\n"
 "Ønskjer du å bruka eller forkasta endringane?"
 
-#: kcmultidialog.cpp:54
+#: kcmultidialog.cpp:52
 #, kde-format
 msgid "Apply Settings"
 msgstr "Bruk innstillingane"
 
-#: kcmultidialog.cpp:259 kpluginselector.cpp:802 kpluginwidget.cpp:360
+#: kcmultidialog.cpp:257 kpluginselector.cpp:809 kpluginwidget.cpp:330
 #, kde-format
 msgid "Configure"
 msgstr "Oppsett"
 
-#: kpluginselector.cpp:129
+#: kpluginselector.cpp:136
 #, kde-format
 msgid ""
 "Automatic changes have been performed due to plugin dependencies. Click here "
@@ -138,7 +138,7 @@ msgstr ""
 "Endringar er gjorde automatisk grunna avhengnad mellom programtillegg. Trykk "
 "her for meir informasjon."
 
-#: kpluginselector.cpp:197
+#: kpluginselector.cpp:204
 #, kde-format
 msgid ""
 "Automatic changes have been performed in order to satisfy plugin "
@@ -147,7 +147,7 @@ msgstr ""
 "Endringar er gjorde automatisk for å løysa opp avhengige mellom "
 "programtillegga:\n"
 
-#: kpluginselector.cpp:203
+#: kpluginselector.cpp:210
 #, kde-format
 msgid ""
 "\n"
@@ -158,7 +158,7 @@ msgstr ""
 "    programtillegget %1 er automatisk valt grunna at det avheng av "
 "programtillegget %2"
 
-#: kpluginselector.cpp:205
+#: kpluginselector.cpp:212
 #, kde-format
 msgid ""
 "\n"
@@ -169,36 +169,36 @@ msgstr ""
 "    programtillegget %1 er automatisk fråvalt grunna at det avheng av "
 "programtillegget %2"
 
-#: kpluginselector.cpp:209
+#: kpluginselector.cpp:216
 #, kde-format
 msgid "Dependency Check"
 msgstr "Avhengnadskontroll"
 
-#: kpluginselector.cpp:227
+#: kpluginselector.cpp:234
 #, kde-format
 msgid "%1 plugin automatically added due to plugin dependencies"
 msgid_plural "%1 plugins automatically added due to plugin dependencies"
 msgstr[0] "%1 programtillegg vart automatisk lagde til grunna avhengnadar"
 msgstr[1] "%1 programtillegg vart automatisk lagde til grunna avhengnadar"
 
-#: kpluginselector.cpp:231
+#: kpluginselector.cpp:238
 #, kde-format
 msgid ", "
 msgstr ", "
 
-#: kpluginselector.cpp:235
+#: kpluginselector.cpp:242
 #, kde-format
 msgid "%1 plugin automatically removed due to plugin dependencies"
 msgid_plural "%1 plugins automatically removed due to plugin dependencies"
 msgstr[0] "%1 programtillegg fjerna grunna avhengnadar"
 msgstr[1] "%1 programtillegg fjerna grunna avhengnadar"
 
-#: kpluginselector.cpp:257 kpluginwidget.cpp:57
+#: kpluginselector.cpp:264 kpluginwidget.cpp:59
 #, kde-format
 msgid "Search..."
 msgstr "Søk …"
 
-#: kpluginselector.cpp:797 kpluginwidget.cpp:355
+#: kpluginselector.cpp:804 kpluginwidget.cpp:325
 #, kde-format
 msgid "About"
 msgstr "Om"
@@ -207,3 +207,61 @@ msgstr "Om"
 #, kde-format
 msgid "Enable component"
 msgstr "Bruk komponent"
+
+#: qml/components/KPluginDelegate.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "About"
+msgstr "Om"
+
+#: qml/components/KPluginDelegate.qml:59
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure..."
+msgstr "Set opp …"
+
+#: qml/components/KPluginSelector.qml:81
+#, kde-format
+msgid "No matches"
+msgstr "Ingen treff"
+
+#: qml/components/KPluginSelector.qml:81
+#, kde-format
+msgid "No plugins found"
+msgstr "Fann ingen programtillegg"
+
+#: qml/components/private/AboutPlugin.qml:42
+#, kde-format
+msgctxt "Plugin name and plugin version"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/components/private/AboutPlugin.qml:64
+#, kde-format
+msgid "Copyright"
+msgstr "Opphavsrett"
+
+#: qml/components/private/AboutPlugin.qml:81
+#, kde-format
+msgid "License:"
+msgstr "Lisens:"
+
+#: qml/components/private/AboutPlugin.qml:100
+#, kde-format
+msgid "Authors"
+msgstr "Opphavspersonar"
+
+#: qml/components/private/AboutPlugin.qml:117
+#, kde-format
+msgid "Credits"
+msgstr "Bidragsytarar"
+
+#: qml/components/private/AboutPlugin.qml:134
+#, kde-format
+msgid "Translators"
+msgstr "Omsetjarar"
+
+#: qml/components/private/AboutPlugin.qml:161
+#, kde-format
+msgid "Send an email to %1"
+msgstr "Send e-post til %1"

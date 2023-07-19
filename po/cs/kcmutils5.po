@@ -3,14 +3,14 @@
 # Lukáš Tinkl <lukas@kde.org>, 2010, 2011, 2012.
 # Vít Pelčák <vit@pelcak.org>, 2011, 2012, 2013, 2014, 2015, 2017, 2019.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012, 2013.
-# Vit Pelcak <vpelcak@suse.cz>, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-30 00:40+0000\n"
-"PO-Revision-Date: 2021-08-26 12:52+0200\n"
+"POT-Creation-Date: 2022-12-07 00:43+0000\n"
+"PO-Revision-Date: 2022-05-19 11:23+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.0\n"
+"X-Generator: Lokalize 22.04.1\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -32,7 +32,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vit@pelcak.org,mkyral@email.cz"
 
-#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:158
+#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:160
 #, kde-format
 msgid "The module %1 is disabled."
 msgstr "Modul %1 je zakázán."
@@ -42,12 +42,12 @@ msgstr "Modul %1 je zakázán."
 msgid "The module has been disabled by the system administrator."
 msgstr "Modul byl vypnut správcem systému."
 
-#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:182
+#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:184
 #, kde-format
 msgid "Error loading QML file."
 msgstr "Chyba při načítání souboru QML."
 
-#: kcmoduleloader.cpp:117
+#: kcmoduleloader.cpp:119
 #, kde-format
 msgid ""
 "<qt><p>Possible reasons:<ul><li>An error occurred during your last system "
@@ -62,12 +62,12 @@ msgstr ""
 "pokuste se odstranit moduly zmíněné v chybové zprávě. Pokud to nepomůže, "
 "kontaktujte svého distributora nebo tvůrce balíčků.</p></qt>"
 
-#: kcmoduleloader.cpp:151
+#: kcmoduleloader.cpp:153
 #, kde-format
 msgid "The module %1 could not be found."
 msgstr "Nelze najít daný modul (%1)."
 
-#: kcmoduleloader.cpp:152
+#: kcmoduleloader.cpp:154
 #, kde-format
 msgid ""
 "<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
@@ -75,7 +75,7 @@ msgid ""
 msgstr ""
 "<qt><p>Diagnóza je:<br />Soubor pracovní plochy %1 nelze nalézt.</p></qt>"
 
-#: kcmoduleloader.cpp:159
+#: kcmoduleloader.cpp:161
 #, kde-format
 msgid ""
 "<qt><p>Either the hardware/software the module configures is not available "
@@ -84,17 +84,17 @@ msgstr ""
 "<qt><p>Buďto hardware/software tohoto modulu není dostupný nebo byl modul "
 "zakázán administrátorem.</p></qt>"
 
-#: kcmoduleloader.cpp:190
+#: kcmoduleloader.cpp:192
 #, kde-format
 msgid "Error loading config module"
 msgstr "Chyba při načítání modulu pro nastavení"
 
-#: kcmoduleloader.cpp:234
+#: kcmoduleloader.cpp:236
 #, kde-format
 msgid "The module %1 is not a valid configuration module."
 msgstr "Modul %1 není platným konfiguračním modulem."
 
-#: kcmoduleloader.cpp:235
+#: kcmoduleloader.cpp:237
 #, kde-format
 msgid ""
 "<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
@@ -103,13 +103,13 @@ msgstr ""
 "<qt>Diagnóza je:<br />Soubor pracovní plochy %1 neudává potřebnou knihovnu.</"
 "qt>"
 
-#: kcmoduleproxy.cpp:105
+#: kcmoduleproxy.cpp:108
 #, kde-format
 msgctxt "Argument is application name"
 msgid "This configuration section is already opened in %1"
 msgstr "Konfigurační sekce je již otevřena v '%1'"
 
-#: kcmultidialog.cpp:51
+#: kcmultidialog.cpp:50
 #, kde-format
 msgid ""
 "The settings of the current module have changed.\n"
@@ -118,12 +118,12 @@ msgstr ""
 "Nastavení v aktuálním modulu bylo změněno.\n"
 "Přejete si provést změny nebo je zapomenout?"
 
-#: kcmultidialog.cpp:53
+#: kcmultidialog.cpp:52
 #, kde-format
 msgid "Apply Settings"
 msgstr "Provést nastavení"
 
-#: kcmultidialog.cpp:258 kpluginselector.cpp:809 kpluginwidget.cpp:360
+#: kcmultidialog.cpp:257 kpluginselector.cpp:809 kpluginwidget.cpp:330
 #, kde-format
 msgid "Configure"
 msgstr "Nastavit"
@@ -191,12 +191,12 @@ msgstr[0] "Automaticky odstraněn %1 modul kvůli závislostem mezi moduly"
 msgstr[1] "Automaticky odstraněny %1 moduly kvůli závislostem mezi moduly"
 msgstr[2] "Automaticky odstraněno %1 modulů kvůli závislostem mezi moduly"
 
-#: kpluginselector.cpp:264 kpluginwidget.cpp:57
+#: kpluginselector.cpp:264 kpluginwidget.cpp:59
 #, kde-format
 msgid "Search..."
 msgstr "Hledat..."
 
-#: kpluginselector.cpp:804 kpluginwidget.cpp:355
+#: kpluginselector.cpp:804 kpluginwidget.cpp:325
 #, kde-format
 msgid "About"
 msgstr "O aplikaci"
@@ -205,3 +205,61 @@ msgstr "O aplikaci"
 #, kde-format
 msgid "Enable component"
 msgstr "Povolit komponentu"
+
+#: qml/components/KPluginDelegate.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "About"
+msgstr "O aplikaci"
+
+#: qml/components/KPluginDelegate.qml:59
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure..."
+msgstr "Nastavit..."
+
+#: qml/components/KPluginSelector.qml:81
+#, kde-format
+msgid "No matches"
+msgstr "Žádné shody"
+
+#: qml/components/KPluginSelector.qml:81
+#, kde-format
+msgid "No plugins found"
+msgstr "Nenalezeny žádné moduly"
+
+#: qml/components/private/AboutPlugin.qml:42
+#, kde-format
+msgctxt "Plugin name and plugin version"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/components/private/AboutPlugin.qml:64
+#, kde-format
+msgid "Copyright"
+msgstr "Copyright"
+
+#: qml/components/private/AboutPlugin.qml:81
+#, kde-format
+msgid "License:"
+msgstr "Licence:"
+
+#: qml/components/private/AboutPlugin.qml:100
+#, kde-format
+msgid "Authors"
+msgstr "Autoři"
+
+#: qml/components/private/AboutPlugin.qml:117
+#, kde-format
+msgid "Credits"
+msgstr "Poděkování"
+
+#: qml/components/private/AboutPlugin.qml:134
+#, kde-format
+msgid "Translators"
+msgstr "Překladatelé"
+
+#: qml/components/private/AboutPlugin.qml:161
+#, kde-format
+msgid "Send an email to %1"
+msgstr "Odeslat e-mail %1"

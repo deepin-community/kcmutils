@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-30 00:40+0000\n"
+"POT-Creation-Date: 2022-12-07 00:43+0000\n"
 "PO-Revision-Date: 2021-08-25 14:22+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr ""
 "rch@richard.eu.org, dgvirtual@akl.lt, gintautas@miselis.lt, stikonas@gmail."
 "com, liudas@akmc.lt, <>"
 
-#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:158
+#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:160
 #, kde-format
 msgid "The module %1 is disabled."
 msgstr "Modulis %1 yra išjungtas."
@@ -48,12 +48,12 @@ msgstr "Modulis %1 yra išjungtas."
 msgid "The module has been disabled by the system administrator."
 msgstr "Sistemos administratorius išjungė šį modulį."
 
-#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:182
+#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:184
 #, kde-format
 msgid "Error loading QML file."
 msgstr "Klaida įkeliant QML failą."
 
-#: kcmoduleloader.cpp:117
+#: kcmoduleloader.cpp:119
 #, kde-format
 msgid ""
 "<qt><p>Possible reasons:<ul><li>An error occurred during your last system "
@@ -69,19 +69,19 @@ msgstr ""
 "modulius. Jei tai nepavyks, susisiekite su savo platinamuoju paketu ar "
 "pakuotoju.</p></qt>"
 
-#: kcmoduleloader.cpp:151
+#: kcmoduleloader.cpp:153
 #, kde-format
 msgid "The module %1 could not be found."
 msgstr "Modulis %1 nerastas."
 
-#: kcmoduleloader.cpp:152
+#: kcmoduleloader.cpp:154
 #, kde-format
 msgid ""
 "<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
 "qt>"
 msgstr "<qt><p>Diagnozė:<br />Darbalaukio failas %1 nerastas.</p></qt>"
 
-#: kcmoduleloader.cpp:159
+#: kcmoduleloader.cpp:161
 #, kde-format
 msgid ""
 "<qt><p>Either the hardware/software the module configures is not available "
@@ -90,30 +90,30 @@ msgstr ""
 "<qt><p>Arba yra neprieinama modulio konfigūruojama aparatinė/programinė "
 "įranga, arba administratorius išjungė šį modulį.</p></qt>"
 
-#: kcmoduleloader.cpp:190
+#: kcmoduleloader.cpp:192
 #, kde-format
 msgid "Error loading config module"
 msgstr "Klaida įkeliant konfigūracijos modulį"
 
-#: kcmoduleloader.cpp:234
+#: kcmoduleloader.cpp:236
 #, kde-format
 msgid "The module %1 is not a valid configuration module."
 msgstr "Modulis %1 nėra tikamas konfigūravimo modulis."
 
-#: kcmoduleloader.cpp:235
+#: kcmoduleloader.cpp:237
 #, kde-format
 msgid ""
 "<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
 "qt>"
 msgstr "<qt>Diagnozė:<br />Darbalaukio failas %1 nenurodo bibliotekos.</qt>"
 
-#: kcmoduleproxy.cpp:105
+#: kcmoduleproxy.cpp:108
 #, kde-format
 msgctxt "Argument is application name"
 msgid "This configuration section is already opened in %1"
 msgstr "Ši konfigūravimo sekcija jau atverta ties %1"
 
-#: kcmultidialog.cpp:51
+#: kcmultidialog.cpp:50
 #, kde-format
 msgid ""
 "The settings of the current module have changed.\n"
@@ -122,12 +122,12 @@ msgstr ""
 "Esamo modulio nuostatos buvo pakeistos.\n"
 "Ar norite taikyti pakeitimus ar juos atmesti?"
 
-#: kcmultidialog.cpp:53
+#: kcmultidialog.cpp:52
 #, kde-format
 msgid "Apply Settings"
 msgstr "Taikyti nuostatas"
 
-#: kcmultidialog.cpp:258 kpluginselector.cpp:809 kpluginwidget.cpp:360
+#: kcmultidialog.cpp:257 kpluginselector.cpp:809 kpluginwidget.cpp:330
 #, kde-format
 msgid "Configure"
 msgstr "Konfigūruoti"
@@ -200,12 +200,12 @@ msgstr[1] "%1 papildiniai automatiškai pašalinti dėl papildinių priklausomyb
 msgstr[2] "%1 papildinių automatiškai pašalinta dėl papildinių priklausomybių"
 msgstr[3] "%1 papildinys automatiškai pašalintas dėl papildinių priklausomybių"
 
-#: kpluginselector.cpp:264 kpluginwidget.cpp:57
+#: kpluginselector.cpp:264 kpluginwidget.cpp:59
 #, kde-format
 msgid "Search..."
 msgstr "Ieškoti..."
 
-#: kpluginselector.cpp:804 kpluginwidget.cpp:355
+#: kpluginselector.cpp:804 kpluginwidget.cpp:325
 #, kde-format
 msgid "About"
 msgstr "Apie"
@@ -214,3 +214,244 @@ msgstr "Apie"
 #, kde-format
 msgid "Enable component"
 msgstr "Įjungti komponentą"
+
+#: qml/components/KPluginDelegate.qml:48
+#, fuzzy, kde-format
+#| msgid "About"
+msgctxt "@info:tooltip"
+msgid "About"
+msgstr "Apie"
+
+#: qml/components/KPluginDelegate.qml:59
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@info:tooltip"
+msgid "Configure..."
+msgstr "Konfigūruoti"
+
+#: qml/components/KPluginSelector.qml:81
+#, kde-format
+msgid "No matches"
+msgstr ""
+
+#: qml/components/KPluginSelector.qml:81
+#, kde-format
+msgid "No plugins found"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:42
+#, kde-format
+msgctxt "Plugin name and plugin version"
+msgid "%1 %2"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:64
+#, kde-format
+msgid "Copyright"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:81
+#, kde-format
+msgid "License:"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:100
+#, kde-format
+msgid "Authors"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:117
+#, kde-format
+msgid "Credits"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:134
+#, kde-format
+msgid "Translators"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:161
+#, kde-format
+msgid "Send an email to %1"
+msgstr ""
+
+#~ msgid "Distance between desktop icons"
+#~ msgstr "Atstumas tarp darbalaukio piktogramų"
+
+#~ msgid "The distance between icons specified in pixels."
+#~ msgstr "Atstumas tarp piktogramų, nurodytas pikseliais."
+
+#~ msgid "Widget style to use"
+#~ msgstr "Valdiklių stilius, kurį naudoti"
+
+#~ msgid ""
+#~ "The name of the widget style, for example \"keramik\" or \"plastik\". "
+#~ "Without quotes."
+#~ msgstr ""
+#~ "Valdiklių stiliaus pavadinimas, pavyzdžiui „keramik“ arba „plastik“. Be "
+#~ "kabučių."
+
+#~ msgid "Use the PC speaker"
+#~ msgstr "Naudoti kompiuterio garsiakalbį"
+
+#~ msgid ""
+#~ "Whether the ordinary PC speaker should be used instead of KDE's own "
+#~ "notifications system."
+#~ msgstr ""
+#~ "Ar vietoj KDE pranešimų sistemos, turėtų būti naudojamas paprastas "
+#~ "kompiuterio garsiakalbis."
+
+#~ msgid "What terminal application to use"
+#~ msgstr "Kokią terminalo programą naudoti"
+
+#~ msgid ""
+#~ "Whenever a terminal application is launched this terminal emulator "
+#~ "program will be used.\n"
+#~ msgstr ""
+#~ "Paleidus terminalo programą, bus naudojamas šis terminalo emuliatorius.\n"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Lygiaplotis šriftas"
+
+#~ msgid ""
+#~ "This font is used when a fixed font is needed. A fixed font has a "
+#~ "constant width.\n"
+#~ msgstr ""
+#~ "Šis šriftas naudojamas, kai prireikia lygiapločio šrifto. Lygiaplotis "
+#~ "šriftas turi pastovų plotį.\n"
+
+#~ msgid "System wide font"
+#~ msgstr "Sistemos masto šriftas"
+
+#~ msgid "Font for menus"
+#~ msgstr "Meniu šriftas"
+
+#~ msgid "What font to use for menus in applications."
+#~ msgstr "Kokį šriftą naudoti programų meniu."
+
+#~ msgid "Color for links"
+#~ msgstr "Nuorodų spalva"
+
+#~ msgid "What color links should be that have not yet been clicked on"
+#~ msgstr "Kokios spalvos turėtų būti dar nespustelėtos nuorodos"
+
+#~ msgid "Color for visited links"
+#~ msgstr "Aplankytų nuorodų spalva"
+
+#~ msgid "Font for the taskbar"
+#~ msgstr "Užduočių juostos šriftas"
+
+#~ msgid ""
+#~ "What font to use for the panel at the bottom of the screen, where the "
+#~ "currently running applications are."
+#~ msgstr ""
+#~ "Kokį šriftą naudoti ekrano apačioje esančiam skydeliui, kuriame yra "
+#~ "rodomos šiuo metu veikiančios programos."
+
+#~ msgid "Fonts for toolbars"
+#~ msgstr "Įrankių juostų šriftas"
+
+#~ msgid "Shortcut for taking screenshot"
+#~ msgstr "Spartusis klavišas, skirtas ekrano kopijos darymui"
+
+#~ msgid "Shortcut for toggling Clipboard Actions on and off"
+#~ msgstr "Spartusis klavišas, skirtas įjungti ir išjungti iškarpinės veiksmus"
+
+#~ msgid "Shortcut for shutting down the computer without confirmation"
+#~ msgstr "Spartusis klavišas, skirtas išjungti kompiuterį be patvirtinimo"
+
+#~ msgid "Show directories first"
+#~ msgstr "Pirma rodyti katalogus"
+
+#~ msgid ""
+#~ "Whether directories should be placed at the top when displaying files"
+#~ msgstr "Ar katalogai turėtų būti rodomi virš failų"
+
+#~ msgid "The URLs recently visited"
+#~ msgstr "Paskiausiai aplankyti URL adresai"
+
+#~ msgid "Used for auto-completion in file dialogs, for example"
+#~ msgstr "Naudojamas automatiniam užbaigimui, pvz. failų dialoguose"
+
+#~ msgid "Show file preview in file dialog"
+#~ msgstr "Rodyti failo peržiūrą failų dialoge"
+
+#~ msgid "Show hidden files"
+#~ msgstr "Rodyti paslėptus failus"
+
+#~ msgid ""
+#~ "Whether files starting with a dot (convention for hidden files) should be "
+#~ "shown"
+#~ msgstr ""
+#~ "Ar rodyti failus, kurių pavadinimas prasideda tašku (sutartinė paslėptų "
+#~ "failų žymė)"
+
+#~ msgid "Show speedbar"
+#~ msgstr "Rodyti greitąją juostą"
+
+#~ msgid ""
+#~ "Whether the shortcut icons to the left in the file dialog should be shown"
+#~ msgstr ""
+#~ "Ar turėtų būti rodomos failų dialogo kairėje esančios šaukinių piktogramos"
+
+#~ msgid "What country"
+#~ msgstr "Kuri šalis"
+
+#~ msgid ""
+#~ "Used to determine how to display numbers, currency and time/date, for "
+#~ "example"
+#~ msgstr ""
+#~ "Naudojama, siekiant nustatyti kaip atvaizduoti, pvz.: skaičius, valiutą, "
+#~ "datą/laiką ir t.t."
+
+#~ msgid "What language to use to display text"
+#~ msgstr "Kurią kalbą naudoti teksto rodymui"
+
+#~ msgid "Character used for indicating positive numbers"
+#~ msgstr "Simbolis, naudojamas parodyti teigiamus skaičius"
+
+#~ msgid "Most countries have no character for this"
+#~ msgstr "Dauguma šalių tam nenaudoja jokio simbolio"
+
+#~ msgid "Path to the autostart directory"
+#~ msgstr "Kelias į automatinio paleidimo katalogą"
+
+#~ msgid ""
+#~ "Path to the directory containing executables to be run on session login"
+#~ msgstr ""
+#~ "Kelias į katalogą, kuriame yra vykdomieji failai, kuriuos reikia paleisti "
+#~ "prisijungimo metu"
+
+#~ msgid "Enable SOCKS support"
+#~ msgstr "Įjungti SOCKS palaikymą"
+
+#~ msgid "Whether SOCKS version 4 and 5 should be enabled in KDE's sub systems"
+#~ msgstr "Ar SOCKS versijos 4 ir 5 turi būti įjungtos KDE posistemiuose"
+
+#~ msgid "Path to custom SOCKS library"
+#~ msgstr "Kelias į tinkintą SOCKS biblioteką"
+
+#~ msgid "Highlight toolbar buttons on mouse over"
+#~ msgstr "Užvedus pelę, paryškinti įrankių juostos mygtukus"
+
+#~ msgid "Show text on toolbar icons "
+#~ msgstr "Rodyti tekstą ant įrankių juostos piktogramų"
+
+#~ msgid "Whether text should be shown in addition to icons on toolbar icons"
+#~ msgstr "Ar įrankių juostose, šalia piktogramų rodyti tekstą"
+
+#~ msgid "Password echo type"
+#~ msgstr "Slaptažodžio rodymo būdas"
+
+#~ msgid "The size of the dialog"
+#~ msgstr "Dialogo lango dydis"
+
+#~ msgid "Select Components"
+#~ msgstr "Pasirinkti komponentus"
+
+#~ msgctxt "Used only for plugins"
+#~ msgid "About %1"
+#~ msgstr "Apie %1"
+
+#~ msgid "Search Plugins"
+#~ msgstr "Ieškoti tarp papildinių"

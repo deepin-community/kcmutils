@@ -17,6 +17,7 @@
 #include <KAboutData>
 #include <KPageWidget>
 #include <kdeclarative/kdeclarative.h>
+#include <kdeclarative/kdeclarative_export.h>
 #include <kdeclarative/qmlobjectsharedengine.h>
 #include <kquickaddons/configmodule.h>
 
@@ -87,7 +88,7 @@ KCModuleQml::KCModuleQml(std::unique_ptr<KQuickAddons::ConfigModule> configModul
         setUseRootOnlyMessage(d->configModule->useRootOnlyMessage());
     });
 
-#ifndef KCONFIGWIDGETS_NO_KAUTH
+#if KCONFIGWIDGETS_WITH_KAUTH
     if (!d->configModule->authActionName().isEmpty()) {
         setAuthAction(KAuth::Action(d->configModule->authActionName()));
     }
@@ -97,7 +98,8 @@ KCModuleQml::KCModuleQml(std::unique_ptr<KQuickAddons::ConfigModule> configModul
 #endif
 
     connect(this, &KCModule::defaultsIndicatorsVisibleChanged, d->configModule.get(), &KQuickAddons::ConfigModule::setDefaultsIndicatorsVisible);
-#if KDECLARATIVE_BUILD_DEPRECATED_SINCE(5, 90)
+
+#if QUICKADDONS_BUILD_DEPRECATED_SINCE(5, 88)
     // KCModule takes ownership of the kabout data so we need to force a copy
     QT_WARNING_PUSH
     QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
@@ -120,11 +122,11 @@ KCModuleQml::KCModuleQml(std::unique_ptr<KQuickAddons::ConfigModule> configModul
     d->quickWindow->setColor(Qt::transparent);
 
     QQmlComponent *component = new QQmlComponent(d->qmlObject->engine(), this);
-    // this has activeFocusOnTab to notice when the navigation wraps
+    // This has activeFocusOnTab to notice when the navigation wraps
     // around, so when we need to go outside and inside
     // pushPage/popPage are needed as push of StackView can't be directly invoked from c++
-    // because its parameters are QQmlV4Function which is not public
-    // the managers of onEnter/ReturnPressed are a workaround of
+    // because its parameters are QQmlV4Function which is not public.
+    // The managers of onEnter/ReturnPressed are a workaround of
     // Qt bug https://bugreports.qt.io/browse/QTBUG-70934
     // clang-format off
     component->setData(QByteArrayLiteral(R"(
@@ -153,10 +155,8 @@ Kirigami.ApplicationItem {
 
     pageStack.separatorVisible: false
     pageStack.globalToolBar.preferredHeight: toolButton.implicitHeight + Kirigami.Units.smallSpacing * 2
-    pageStack.globalToolBar.style: pageStack.wideMode && pageStack.columnView.columnResizeMode !== Kirigami.ColumnView.SingleColumn
-        ? Kirigami.ApplicationHeaderStyle.Titles
-        : Kirigami.ApplicationHeaderStyle.Breadcrumb
-    pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton | Kirigami.ApplicationHeaderStyle.ShowForwardButton
+    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar
+    pageStack.globalToolBar.showNavigationButtons: pageStack.currentIndex > 0 ? Kirigami.ApplicationHeaderStyle.ShowBackButton : Kirigami.ApplicationHeaderStyle.NoNavigationButtons
 
     pageStack.columnView.columnResizeMode: pageStack.items.length > 0 && pageStack.items[0].Kirigami.ColumnView.fillWidth
         ? Kirigami.ColumnView.SingleColumn
@@ -171,7 +171,7 @@ Kirigami.ApplicationItem {
         event.accepted = true
     }
 }
-    )"), QUrl());
+    )"), QUrl(QStringLiteral("kcmutils/kcmmoduleqml.cpp")));
     // clang-format on
 
     d->rootPlaceHolder = qobject_cast<QQuickItem *>(component->create());
@@ -220,7 +220,6 @@ Kirigami.ApplicationItem {
     }
 
     layout->addWidget(d->quickWidget);
-    layout->setContentsMargins(0, 0, 0, 0);
 }
 
 KCModuleQml::~KCModuleQml()
@@ -264,7 +263,7 @@ void KCModuleQml::focusInEvent(QFocusEvent *event)
 
 QSize KCModuleQml::sizeHint() const
 {
-    if (!d->configModule->mainUi()) {
+    if (!d->rootPlaceHolder) {
         return QSize();
     }
 
@@ -276,14 +275,16 @@ QString KCModuleQml::quickHelp() const
     return d->configModule->quickHelp();
 }
 
-#if KDECLARATIVE_BUILD_DEPRECATED_SINCE(5, 90)
+#if KCONFIGWIDGETS_BUILD_DEPRECATED_SINCE(5, 90)
 const KAboutData *KCModuleQml::aboutData() const
 {
+#if QUICKADDONS_BUILD_DEPRECATED_SINCE(5, 88)
     QT_WARNING_PUSH
     QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
     QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     return d->configModule->aboutData();
     QT_WARNING_POP
+#endif
 }
 #endif
 
