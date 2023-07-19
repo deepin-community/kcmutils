@@ -6,13 +6,13 @@
 # Eugene Onischenko <oneugene@ukr.net>, 2002, 2003, 2004, 2005, 2006.
 # Andriy Rysin <arysin@bcsii.com>, 2002, 2003, 2006, 2007.
 # Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2005, 2006, 2007, 2008.
-# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2012, 2013, 2018, 2019, 2021.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2012, 2013, 2018, 2019, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmutils5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-30 00:40+0000\n"
-"PO-Revision-Date: 2021-08-22 08:38+0300\n"
+"POT-Creation-Date: 2022-12-07 00:43+0000\n"
+"PO-Revision-Date: 2022-04-24 08:48+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -33,7 +33,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "fr.ivan@ukrainian-orthodox.org,yurchor@ukr.net"
 
-#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:158
+#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:160
 #, kde-format
 msgid "The module %1 is disabled."
 msgstr "Модуль %1 вимкнений."
@@ -43,12 +43,12 @@ msgstr "Модуль %1 вимкнений."
 msgid "The module has been disabled by the system administrator."
 msgstr "Модуль було вимкнено адміністратором системи."
 
-#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:182
+#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:184
 #, kde-format
 msgid "Error loading QML file."
 msgstr "Помилка під час завантаження файла QML."
 
-#: kcmoduleloader.cpp:117
+#: kcmoduleloader.cpp:119
 #, kde-format
 msgid ""
 "<qt><p>Possible reasons:<ul><li>An error occurred during your last system "
@@ -63,19 +63,19 @@ msgstr ""
 "варіанти та спробуйте витерти вказаний модуль. Якщо це не спрацювало, "
 "зверніться до авторів вашого дистрибутива чи пакунків.</p></qt>"
 
-#: kcmoduleloader.cpp:151
+#: kcmoduleloader.cpp:153
 #, kde-format
 msgid "The module %1 could not be found."
 msgstr "Не вдалось знайти модуль %1."
 
-#: kcmoduleloader.cpp:152
+#: kcmoduleloader.cpp:154
 #, kde-format
 msgid ""
 "<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
 "qt>"
 msgstr "<qt><p>Діагностика:<br />Не вдалось знайти файл стільниці %1.</p></qt>"
 
-#: kcmoduleloader.cpp:159
+#: kcmoduleloader.cpp:161
 #, kde-format
 msgid ""
 "<qt><p>Either the hardware/software the module configures is not available "
@@ -84,30 +84,30 @@ msgstr ""
 "<qt><p>Модуль недоступний апаратно, або програмно, або його було вимкнено "
 "адміністратором.</p></qt>"
 
-#: kcmoduleloader.cpp:190
+#: kcmoduleloader.cpp:192
 #, kde-format
 msgid "Error loading config module"
 msgstr "Помилка під час завантаження модуля налаштовування"
 
-#: kcmoduleloader.cpp:234
+#: kcmoduleloader.cpp:236
 #, kde-format
 msgid "The module %1 is not a valid configuration module."
 msgstr "Модуль %1 не є коректним модулем налаштування."
 
-#: kcmoduleloader.cpp:235
+#: kcmoduleloader.cpp:237
 #, kde-format
 msgid ""
 "<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
 "qt>"
 msgstr "<qt>Діагностика:<br />Файл стільниці %1 не вказує бібліотеку.</qt>"
 
-#: kcmoduleproxy.cpp:105
+#: kcmoduleproxy.cpp:108
 #, kde-format
 msgctxt "Argument is application name"
 msgid "This configuration section is already opened in %1"
 msgstr "Цей розділ вже відкритий у %1"
 
-#: kcmultidialog.cpp:51
+#: kcmultidialog.cpp:50
 #, kde-format
 msgid ""
 "The settings of the current module have changed.\n"
@@ -116,12 +116,12 @@ msgstr ""
 "Параметри активного модуля було змінено.\n"
 "Застосувати зміни чи відкинути їх?"
 
-#: kcmultidialog.cpp:53
+#: kcmultidialog.cpp:52
 #, kde-format
 msgid "Apply Settings"
 msgstr "Застосувати параметри"
 
-#: kcmultidialog.cpp:258 kpluginselector.cpp:809 kpluginwidget.cpp:360
+#: kcmultidialog.cpp:257 kpluginselector.cpp:809 kpluginwidget.cpp:330
 #, kde-format
 msgid "Configure"
 msgstr "Налаштування"
@@ -193,12 +193,12 @@ msgstr[1] "%1 додатки автоматично вилучено, щоб з�
 msgstr[2] "%1 додатків автоматично вилучено, щоб задовольнити залежності"
 msgstr[3] "%1 додаток автоматично вилучено, щоб задовольнити залежності"
 
-#: kpluginselector.cpp:264 kpluginwidget.cpp:57
+#: kpluginselector.cpp:264 kpluginwidget.cpp:59
 #, kde-format
 msgid "Search..."
 msgstr "Шукати…"
 
-#: kpluginselector.cpp:804 kpluginwidget.cpp:355
+#: kpluginselector.cpp:804 kpluginwidget.cpp:325
 #, kde-format
 msgid "About"
 msgstr "Відомості"
@@ -207,3 +207,243 @@ msgstr "Відомості"
 #, kde-format
 msgid "Enable component"
 msgstr "Увімкнути компонент"
+
+#: qml/components/KPluginDelegate.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "About"
+msgstr "Відомості"
+
+#: qml/components/KPluginDelegate.qml:59
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure..."
+msgstr "Налаштувати…"
+
+#: qml/components/KPluginSelector.qml:81
+#, kde-format
+msgid "No matches"
+msgstr "Немає відповідників"
+
+#: qml/components/KPluginSelector.qml:81
+#, kde-format
+msgid "No plugins found"
+msgstr "Додатків не знайдено"
+
+#: qml/components/private/AboutPlugin.qml:42
+#, kde-format
+msgctxt "Plugin name and plugin version"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/components/private/AboutPlugin.qml:64
+#, kde-format
+msgid "Copyright"
+msgstr "Авторські права"
+
+#: qml/components/private/AboutPlugin.qml:81
+#, kde-format
+msgid "License:"
+msgstr "Ліцензування:"
+
+#: qml/components/private/AboutPlugin.qml:100
+#, kde-format
+msgid "Authors"
+msgstr "Автори"
+
+#: qml/components/private/AboutPlugin.qml:117
+#, kde-format
+msgid "Credits"
+msgstr "Подяки"
+
+#: qml/components/private/AboutPlugin.qml:134
+#, kde-format
+msgid "Translators"
+msgstr "Перекладачі"
+
+#: qml/components/private/AboutPlugin.qml:161
+#, kde-format
+msgid "Send an email to %1"
+msgstr "Надіслати повідомлення ел. пошти до %1"
+
+#~ msgid "Distance between desktop icons"
+#~ msgstr "Відстань між піктограмами на стільниці"
+
+#~ msgid "The distance between icons specified in pixels."
+#~ msgstr "Відстань між піктограмами стільниці в пікселях."
+
+#~ msgid "Widget style to use"
+#~ msgstr "Використовувати стиль віджетів"
+
+#~ msgid ""
+#~ "The name of the widget style, for example \"keramik\" or \"plastik\". "
+#~ "Without quotes."
+#~ msgstr "Назва стилю віджетів, напр., «keramik» або «plastik». Без лапок."
+
+#~ msgid "Use the PC speaker"
+#~ msgstr "Використовувати динамік ПК"
+
+#~ msgid ""
+#~ "Whether the ordinary PC speaker should be used instead of KDE's own "
+#~ "notifications system."
+#~ msgstr ""
+#~ "Чи використовувати вбудований гучномовець комп’ютера замість системи "
+#~ "сповіщень KDE."
+
+#~ msgid "What terminal application to use"
+#~ msgstr "Використовувати програму термінала"
+
+#~ msgid ""
+#~ "Whenever a terminal application is launched this terminal emulator "
+#~ "program will be used.\n"
+#~ msgstr ""
+#~ "При запуску програми термінала буде використовуватися ця програма "
+#~ "емуляції термінала.\n"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Шрифт однакової ширини"
+
+#~ msgid ""
+#~ "This font is used when a fixed font is needed. A fixed font has a "
+#~ "constant width.\n"
+#~ msgstr ""
+#~ "Використовуватиметься цей шрифт, коли виникатиме потреба у шрифті "
+#~ "однакової ширини символів. Цей шрифт має фіксовану ширину символів.\n"
+
+#~ msgid "System wide font"
+#~ msgstr "Шрифт для всієї системи"
+
+#~ msgid "Font for menus"
+#~ msgstr "Шрифт для меню"
+
+#~ msgid "What font to use for menus in applications."
+#~ msgstr "Який шрифт використовувати в програмах для меню."
+
+#~ msgid "Color for links"
+#~ msgstr "Колір для посилань"
+
+#~ msgid "What color links should be that have not yet been clicked on"
+#~ msgstr "Колір для посилань, на які ще не було натиснуто."
+
+#~ msgid "Color for visited links"
+#~ msgstr "Колір для відвіданих посилань"
+
+#~ msgid "Font for the taskbar"
+#~ msgstr "Шрифт для панелі задач"
+
+#~ msgid ""
+#~ "What font to use for the panel at the bottom of the screen, where the "
+#~ "currently running applications are."
+#~ msgstr ""
+#~ "Який шрифт використовувати для панелі внизу екрана, де показано запущені "
+#~ "програми."
+
+#~ msgid "Fonts for toolbars"
+#~ msgstr "Шрифти для пеналів"
+
+#~ msgid "Shortcut for taking screenshot"
+#~ msgstr "Скорочення для створення знімків екрана"
+
+#~ msgid "Shortcut for toggling Clipboard Actions on and off"
+#~ msgstr "Скорочення для вмикання/вимикання дій кишені"
+
+#~ msgid "Shortcut for shutting down the computer without confirmation"
+#~ msgstr "Скорочення для вимикання комп'ютера без підтвердження"
+
+#~ msgid "Show directories first"
+#~ msgstr "Першими показувати каталоги"
+
+#~ msgid ""
+#~ "Whether directories should be placed at the top when displaying files"
+#~ msgstr "Чи розміщувати каталоги вгорі при показі файлів"
+
+#~ msgid "The URLs recently visited"
+#~ msgstr "Адреси URL, недавно відвідані"
+
+#~ msgid "Used for auto-completion in file dialogs, for example"
+#~ msgstr ""
+#~ "Використовується для автозавершення, наприклад у діалогових вікнах файлів."
+
+#~ msgid "Show file preview in file dialog"
+#~ msgstr "Чи показувати перегляд файлів в вікні файлів"
+
+#~ msgid "Show hidden files"
+#~ msgstr "Показувати приховані файли"
+
+#~ msgid ""
+#~ "Whether files starting with a dot (convention for hidden files) should be "
+#~ "shown"
+#~ msgstr ""
+#~ "Визначає чи показувати файли, які починаються з крапки (умова для "
+#~ "прихованих файлів)"
+
+#~ msgid "Show speedbar"
+#~ msgstr "Показати смужку швидкого доступу"
+
+#~ msgid ""
+#~ "Whether the shortcut icons to the left in the file dialog should be shown"
+#~ msgstr ""
+#~ "Чи показувати піктограми скорочень, які знаходяться ліворуч у файловому "
+#~ "діалозі"
+
+#~ msgid "What country"
+#~ msgstr "Яка країна"
+
+#~ msgid ""
+#~ "Used to determine how to display numbers, currency and time/date, for "
+#~ "example"
+#~ msgstr ""
+#~ "Використовується для визначення як показувати, напр., числа, грошові "
+#~ "одиниці та час/дату"
+
+#~ msgid "What language to use to display text"
+#~ msgstr "Якою мовою показувати текст"
+
+#~ msgid "Character used for indicating positive numbers"
+#~ msgstr "Символ для вказування додатних чисел"
+
+#~ msgid "Most countries have no character for this"
+#~ msgstr "Більшість країн не мають для цього символів"
+
+#~ msgid "Path to the autostart directory"
+#~ msgstr "Шлях до каталогу автозапуску"
+
+#~ msgid ""
+#~ "Path to the directory containing executables to be run on session login"
+#~ msgstr ""
+#~ "Шлях до каталогу, який містить програми, що повинні запускатись під час "
+#~ "входу в систему"
+
+#~ msgid "Enable SOCKS support"
+#~ msgstr "Увімкнути підтримку SOCKS"
+
+#~ msgid "Whether SOCKS version 4 and 5 should be enabled in KDE's sub systems"
+#~ msgstr "Чи увімкнути версії 4 і 5 SOCKS у підсистемах KDE"
+
+#~ msgid "Path to custom SOCKS library"
+#~ msgstr "Шлях до нетипової бібліотеки SOCKS"
+
+#~ msgid "Highlight toolbar buttons on mouse over"
+#~ msgstr "При наведенні курсора підсвічувати кнопки пенала"
+
+#~ msgid "Show text on toolbar icons "
+#~ msgstr "Показувати текст на піктограмах пенала"
+
+#~ msgid "Whether text should be shown in addition to icons on toolbar icons"
+#~ msgstr "Чи показувати на піктограмах пенала текст на додачу до піктограм"
+
+#~ msgid "Password echo type"
+#~ msgstr "Тип луни пароля"
+
+#~ msgid "The size of the dialog"
+#~ msgstr "Розмір вікна"
+
+#~ msgid "Select Components"
+#~ msgstr "Вибір компонентів"
+
+#~ msgctxt "Used only for plugins"
+#~ msgid "About %1"
+#~ msgstr "Про %1"
+
+#~ msgid "Search Plugins"
+#~ msgstr "Пошук додатків"

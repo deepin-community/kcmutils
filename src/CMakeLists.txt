@@ -1,4 +1,8 @@
+# SPDX-FileCopyrightText: 2022 Alexander Lohnau <alexander.lohnau@gmx.de>
+# SPDX-License-Identifier: BSD-3-Clause
+
 add_subdirectory(core)
+add_subdirectory(qml)
 
 ########### kcmutils ###############
 set(kcmutils_LIB_SRCS
@@ -35,6 +39,15 @@ set(kcmutils_LIB_SRCS
 )
 
 add_library(KF5KCMUtils ${kcmutils_LIB_SRCS})
+
+ecm_qt_declare_logging_category(KF5KCMUtils
+    HEADER kcmutils_debug.h
+    IDENTIFIER KCMUTILS_LOG
+    CATEGORY_NAME kf.kcmutils
+    DESCRIPTION "KCMUtils"
+    EXPORT KCMUTILS
+)
+
 ecm_generate_export_header(KF5KCMUtils
     BASE_NAME KCMUtils
     GROUP_BASE_NAME KF
@@ -52,6 +65,7 @@ target_link_libraries(KF5KCMUtils
     KF5::Service        # KService
   PRIVATE
     KF5KCMUtilsCore
+    kcmutils_proxy_model
     Qt${QT_MAJOR_VERSION}::DBus       # dbus usage in kcmoduleproxy.cpp
     Qt${QT_MAJOR_VERSION}::Qml
     Qt${QT_MAJOR_VERSION}::Quick
@@ -64,6 +78,16 @@ target_link_libraries(KF5KCMUtils
     KF5::QuickAddons
     KF5::Declarative
 )
+
+if (QT_MAJOR_VERSION STREQUAL "6")
+    # TODO: instead of relying on KF5ConfigWidgetsConfig.cmake optionally getting KAuth dependency,
+    # have KF5ConfigWidgetsConfig.cmake provide a proper flag/property about using the KAuth feature
+    if (TARGET KF5::AuthWidgets)
+        # KF5::ConfigWidgets has only KF5::AuthCore in public interface in KF6
+        target_link_libraries(KF5KCMUtils PRIVATE KF5::AuthWidgets) # KAuth::ObjectDecorator
+    endif()
+endif()
+
 set_target_properties(KF5KCMUtils PROPERTIES
                       VERSION ${KCMUTILS_VERSION}
                       SOVERSION ${KCMUTILS_SOVERSION}
@@ -102,7 +126,7 @@ install(FILES
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KCMUtils/ksettings COMPONENT Devel
 )
 
-install(TARGETS KF5KCMUtils EXPORT KF5KCMUtilsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5KCMUtils EXPORT KF5KCMUtilsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
  kcmodule.desktop

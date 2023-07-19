@@ -1,20 +1,136 @@
-kcmutils (5.90.0-3deepin) unstable; urgency=medium
+kcmutils (5.103.0-3) unstable; urgency=medium
 
-  * 5.90.0-2+u001 > 5.90.0-2deepin 
+  * Fix installation broken in previous change for Multi-Arch support.
 
- -- LiChengGang <lichenggang@uniontech.com>  Thu, 01 Jun 2023 16:05:46 +0800
+ -- Aurélien COUDERC <coucouf@debian.org>  Tue, 28 Feb 2023 12:50:51 +0100
 
-kcmutils (5.90.0-2deepin) unstable; urgency=medium
+kcmutils (5.103.0-2) unstable; urgency=medium
 
-  * Regulate version name
+  [ Patrick Franz ]
+  * Team upload.
+  * Make libkf5kcmutils-bin Multi-Arch: foreign, thx to Helmut Grohne
+    (Closes: #1022135).
 
- -- Yutao Meng <mengyutao@uniontech.com>  Tue, 21 Mar 2023 14:27:28 +0800
+ -- Patrick Franz <deltaone@debian.org>  Mon, 27 Feb 2023 19:10:11 +0100
 
-kcmutils (5.90.0-2) unstable; urgency=medium
+kcmutils (5.103.0-1) unstable; urgency=medium
 
-  * update
+  [ Aurélien COUDERC ]
+  * New upstream release (5.103.0).
+  * Update build-deps and deps with the info from cmake.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 24 Apr 2022 19:07:35 +0800
+ -- Aurélien COUDERC <coucouf@debian.org>  Sun, 12 Feb 2023 21:44:32 +0100
+
+kcmutils (5.102.0-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.102.0).
+  * Update build-deps and deps with the info from cmake.
+  * Bump Standards-Version to 4.6.2, no change required.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Sun, 22 Jan 2023 21:35:11 +0100
+
+kcmutils (5.101.0-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.101.0).
+  * Update build-deps and deps with the info from cmake.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Tue, 13 Dec 2022 07:40:37 +0100
+
+kcmutils (5.100.0-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.99.0).
+  * Update build-deps and deps with the info from cmake.
+  * New upstream release (5.100.0).
+  * Update build-deps and deps with the info from cmake.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Sat, 19 Nov 2022 23:19:06 +0100
+
+kcmutils (5.98.0-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.98.0).
+  * Update build-deps and deps with the info from cmake.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Sun, 18 Sep 2022 23:13:26 +0200
+
+kcmutils (5.97.0+really5.97.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add libkf5kcmutils-bin as dependency in libkf5kcmutils-dev, so the cmake
+    config files work.
+
+ -- Pino Toscano <pino@debian.org>  Fri, 19 Aug 2022 07:08:08 +0200
+
+kcmutils (5.97.0+really5.97.0-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * Reupload with a +really version to work around the broken .asc signature
+    file in the 5.97.0-1 upload.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Wed, 17 Aug 2022 09:58:09 +0200
+
+kcmutils (5.97.0-2) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * Release to unstable.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Sun, 14 Aug 2022 19:01:56 +0200
+
+kcmutils (5.97.0-1) experimental; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.97.0).
+  * Add libkf5kcmutils5-bin package to ship the new
+    kcmdesktopfilegenerator binary.
+  * Drop obsolete Breaks/Replaces.
+  * Refresh copyright information.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Fri, 12 Aug 2022 18:37:45 +0200
+
+kcmutils (5.96.0-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.96.0).
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Sun, 31 Jul 2022 13:33:10 +0200
+
+kcmutils (5.94.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Bump Standards-Version to 4.6.1, no changes required.
+  * Remove inactive Uploaders.
+  * Modernize building:
+    - add the dh-sequence-kf5 build dependency to use the kf5 addon
+      automatically
+    - drop all the manually specified addons and buildsystem for dh
+
+ -- Pino Toscano <pino@debian.org>  Fri, 27 May 2022 08:55:09 +0200
+
+kcmutils (5.94.0-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.94.0).
+  * Add symbols for libkf5kcmutilscore5.
+  * Short descriptions shouldn't be sentences.
+  * Review copyright information.
+
+  [ Rik Mills ]
+  * Add new binary packages libkf5kcmutilscore5 and
+    qml-module-org-kde-kcmutils.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Thu, 19 May 2022 23:59:07 +0200
+
+kcmutils (5.93.0-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.93.0).
+  * Update the list of installed files from build logs.
+  * Update symbols from build for 5.93.0.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Wed, 11 May 2022 23:22:49 +0200
 
 kcmutils (5.90.0-2) unstable; urgency=medium
 

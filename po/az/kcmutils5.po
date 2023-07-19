@@ -1,13 +1,13 @@
 # Copyright (C) 2020 This file is copyright:
 # This file is distributed under the same license as the kcmutils package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021.
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmutils\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-30 00:40+0000\n"
-"PO-Revision-Date: 2021-08-25 09:58+0400\n"
+"POT-Creation-Date: 2022-12-07 00:43+0000\n"
+"PO-Revision-Date: 2022-05-01 22:36+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,19 +15,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.0\n"
+"X-Generator: Lokalize 22.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Xəyyam"
+msgstr "Xəyyam Qocayev"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xxmn77@gmail.com"
 
-#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:158
+#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:160
 #, kde-format
 msgid "The module %1 is disabled."
 msgstr "%1 modulu söndürülüb"
@@ -37,12 +37,12 @@ msgstr "%1 modulu söndürülüb"
 msgid "The module has been disabled by the system administrator."
 msgstr "Modul, sistem inzibatçısı tərəfindən söndürülüb."
 
-#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:182
+#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:184
 #, kde-format
 msgid "Error loading QML file."
 msgstr "QML faylın yüklənməsində xəta"
 
-#: kcmoduleloader.cpp:117
+#: kcmoduleloader.cpp:119
 #, kde-format
 msgid ""
 "<qt><p>Possible reasons:<ul><li>An error occurred during your last system "
@@ -57,19 +57,19 @@ msgstr ""
 "nöqtələri diqqətlə yoxlayın və yuxarıda xəta bildirişində göstərilən "
 "modulları silməyə cəhd edin</p></qt>"
 
-#: kcmoduleloader.cpp:151
+#: kcmoduleloader.cpp:153
 #, kde-format
 msgid "The module %1 could not be found."
 msgstr "Modul %1 tapılmadı"
 
-#: kcmoduleloader.cpp:152
+#: kcmoduleloader.cpp:154
 #, kde-format
 msgid ""
 "<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
 "qt>"
 msgstr "<qt><p>Diaqnoz: <br />%1 İş masası faylı tapılmadı</p></qt>"
 
-#: kcmoduleloader.cpp:159
+#: kcmoduleloader.cpp:161
 #, kde-format
 msgid ""
 "<qt><p>Either the hardware/software the module configures is not available "
@@ -78,30 +78,30 @@ msgstr ""
 "<qt><p>Ya avadanlıq/proqrqm təminatı konfiqurasiya modulu mövcud deyil ya da "
 "bu modul inzibatçı (admin) tərəfindən söndürülüb</p></qt>"
 
-#: kcmoduleloader.cpp:190
+#: kcmoduleloader.cpp:192
 #, kde-format
 msgid "Error loading config module"
 msgstr "Tənzimləmə modulunun yüklənilməsi xətası"
 
-#: kcmoduleloader.cpp:234
+#: kcmoduleloader.cpp:236
 #, kde-format
 msgid "The module %1 is not a valid configuration module."
 msgstr "%1 modulu yararlı KDE ayarları modulu deyil"
 
-#: kcmoduleloader.cpp:235
+#: kcmoduleloader.cpp:237
 #, kde-format
 msgid ""
 "<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
 "qt>"
 msgstr "<qt>Diaqnoz:<br />%1 İş masası faylı kitabxana gostərmir</qt>"
 
-#: kcmoduleproxy.cpp:105
+#: kcmoduleproxy.cpp:108
 #, kde-format
 msgctxt "Argument is application name"
 msgid "This configuration section is already opened in %1"
 msgstr "Bu tənzimləmələr bölməsi, artıq %1-da/də açıqdır"
 
-#: kcmultidialog.cpp:51
+#: kcmultidialog.cpp:50
 #, kde-format
 msgid ""
 "The settings of the current module have changed.\n"
@@ -110,12 +110,12 @@ msgstr ""
 "Cari modulun ayarları dəyişdirildi.\n"
 "Siz bu ayarları qəbul etmək yoxsa ləğv etmək istəyirsiniz?"
 
-#: kcmultidialog.cpp:53
+#: kcmultidialog.cpp:52
 #, kde-format
 msgid "Apply Settings"
 msgstr "Ayarların tətbiq edilməsi"
 
-#: kcmultidialog.cpp:258 kpluginselector.cpp:809 kpluginwidget.cpp:360
+#: kcmultidialog.cpp:257 kpluginselector.cpp:809 kpluginwidget.cpp:330
 #, kde-format
 msgid "Configure"
 msgstr "Tənzimləmək"
@@ -182,12 +182,12 @@ msgid_plural "%1 plugins automatically removed due to plugin dependencies"
 msgstr[0] "%1 qoşma, qoşma asılılıqlarına görə ləğv edildi"
 msgstr[1] "%1 qoşma, qoşma asılılıqlarına görə ləğv edildi"
 
-#: kpluginselector.cpp:264 kpluginwidget.cpp:57
+#: kpluginselector.cpp:264 kpluginwidget.cpp:59
 #, kde-format
 msgid "Search..."
 msgstr "Axtarış..."
 
-#: kpluginselector.cpp:804 kpluginwidget.cpp:355
+#: kpluginselector.cpp:804 kpluginwidget.cpp:325
 #, kde-format
 msgid "About"
 msgstr "Haqqında"
@@ -196,3 +196,238 @@ msgstr "Haqqında"
 #, kde-format
 msgid "Enable component"
 msgstr "Tərkib hissələrini aktiv etmək"
+
+#: qml/components/KPluginDelegate.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "About"
+msgstr "Haqqında"
+
+#: qml/components/KPluginDelegate.qml:59
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure..."
+msgstr "Tənzimləyin..."
+
+#: qml/components/KPluginSelector.qml:81
+#, kde-format
+msgid "No matches"
+msgstr "Uyğun gələn yoxdur"
+
+#: qml/components/KPluginSelector.qml:81
+#, kde-format
+msgid "No plugins found"
+msgstr "Qoşmalar tapılmadı"
+
+#: qml/components/private/AboutPlugin.qml:42
+#, kde-format
+msgctxt "Plugin name and plugin version"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/components/private/AboutPlugin.qml:64
+#, kde-format
+msgid "Copyright"
+msgstr "Müəllif Hüquqları"
+
+#: qml/components/private/AboutPlugin.qml:81
+#, kde-format
+msgid "License:"
+msgstr "Lisenziya:"
+
+#: qml/components/private/AboutPlugin.qml:100
+#, kde-format
+msgid "Authors"
+msgstr "Müəlliflər"
+
+#: qml/components/private/AboutPlugin.qml:117
+#, kde-format
+msgid "Credits"
+msgstr "Minnətdarlıq"
+
+#: qml/components/private/AboutPlugin.qml:134
+#, kde-format
+msgid "Translators"
+msgstr "Tərcüməçilər"
+
+#: qml/components/private/AboutPlugin.qml:161
+#, kde-format
+msgid "Send an email to %1"
+msgstr "%1 e-poçtuna məktub göndərin"
+
+#~ msgid "Distance between desktop icons"
+#~ msgstr "Masaüstü ikonlar arasında məsafə"
+
+#~ msgid "The distance between icons specified in pixels."
+#~ msgstr "İkonlar arası məsafə piksel ilə"
+
+#~ msgid "Widget style to use"
+#~ msgstr "İstifadə üçün vidjet tərzi"
+
+#~ msgid ""
+#~ "The name of the widget style, for example \"keramik\" or \"plastik\". "
+#~ "Without quotes."
+#~ msgstr ""
+#~ "Vidjet tərzinin adı, məsələn, \"keramik\" və ya \"plastik\". (dırnaq "
+#~ "işarəsiz)"
+
+#~ msgid "Use the PC speaker"
+#~ msgstr "PC səsucaldıcılarını istifadə et"
+
+#~ msgid ""
+#~ "Whether the ordinary PC speaker should be used instead of KDE's own "
+#~ "notifications system."
+#~ msgstr ""
+#~ "KDE biliriş sistemləri yerinə PC-nin özünə quraşdırılmış "
+#~ "səsucaldıcılarından istifadə olunub olunmayacağı"
+
+#~ msgid "What terminal application to use"
+#~ msgstr "Hansı termanal tətbiqini istifadə etməli"
+
+#~ msgid ""
+#~ "Whenever a terminal application is launched this terminal emulator "
+#~ "program will be used.\n"
+#~ msgstr ""
+#~ "Nə vaxtsa terminal tətbiqi başladılarsa bu terminal proqramı istifadə "
+#~ "olunacaq\n"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Sabit ölçülü şrift"
+
+#~ msgid ""
+#~ "This font is used when a fixed font is needed. A fixed font has a "
+#~ "constant width.\n"
+#~ msgstr ""
+#~ "Sabit ölçülü şriftə ehtiyac olduğu zaman bu şriftdən istifadə olunur. "
+#~ "Sabit şriftin bütün simvollarının ölçüləri eynidir.\n"
+
+#~ msgid "System wide font"
+#~ msgstr "Əsas sistem şrifti"
+
+#~ msgid "Font for menus"
+#~ msgstr "Menyu üçün şrift"
+
+#~ msgid "What font to use for menus in applications."
+#~ msgstr "Tətbiqlərin menyuları üçün şriftlər"
+
+#~ msgid "Color for links"
+#~ msgstr "Link rəngi"
+
+#~ msgid "What color links should be that have not yet been clicked on"
+#~ msgstr "Hələ kliklənməmiş hansı rəng keçidləri olmalıdır"
+
+#~ msgid "Color for visited links"
+#~ msgstr "Ziyarət edilmiş linklərin rəngi"
+
+#~ msgid "Font for the taskbar"
+#~ msgstr "Tapşırıq paneli şrifti"
+
+#~ msgid ""
+#~ "What font to use for the panel at the bottom of the screen, where the "
+#~ "currently running applications are."
+#~ msgstr ""
+#~ "Ekranın altında hala hazırda işlək proqramlar yerləşən paneldə istifadə "
+#~ "olunmaq üşün srift"
+
+#~ msgid "Fonts for toolbars"
+#~ msgstr "Alətlər paneli üçün srift"
+
+#~ msgid "Shortcut for taking screenshot"
+#~ msgstr "Ektranın şəklini çəkmək üçün qısayol"
+
+#~ msgid "Shortcut for toggling Clipboard Actions on and off"
+#~ msgstr ""
+#~ "Mübadilə buferinin fəaliyyətini işə salmaq və dayandırmaq üçün qısayol"
+
+#~ msgid "Shortcut for shutting down the computer without confirmation"
+#~ msgstr "Kompyuterin sönməsini təsdiq etmədən söndürən qısayol"
+
+#~ msgid "Show directories first"
+#~ msgstr "Öncə qovluqları göstərmək"
+
+#~ msgid ""
+#~ "Whether directories should be placed at the top when displaying files"
+#~ msgstr "Fayllar göstərilərsə qovluqlar ən üst sırada göstərilsin"
+
+#~ msgid "The URLs recently visited"
+#~ msgstr "Bir az əvvəl ziyarət edilən URL-ünvanları"
+
+#~ msgid "Used for auto-completion in file dialogs, for example"
+#~ msgstr "Dialoqlarda mətn doldurması üçün istifadə edilir, misal üçün"
+
+#~ msgid "Show file preview in file dialog"
+#~ msgstr "Fayl seçimi dialoqunda faylın ilkin baxışını göstərmək"
+
+#~ msgid "Show hidden files"
+#~ msgstr "Gizli faylları göstərmək"
+
+#~ msgid ""
+#~ "Whether files starting with a dot (convention for hidden files) should be "
+#~ "shown"
+#~ msgstr ""
+#~ "Nöqtə ilə başlayan (gizli fayllar kimi qəbul edilmiş) gizli fayların "
+#~ "göstərilib göstərilməməsi"
+
+#~ msgid "Show speedbar"
+#~ msgstr "Cəld giriş panelini göstərmək"
+
+#~ msgid ""
+#~ "Whether the shortcut icons to the left in the file dialog should be shown"
+#~ msgstr "Fayl dialoqunun solunda qısayolun göstərilib göstərilməməsi"
+
+#~ msgid "What country"
+#~ msgstr "Hansı ölkə"
+
+#~ msgid ""
+#~ "Used to determine how to display numbers, currency and time/date, for "
+#~ "example"
+#~ msgstr ""
+#~ "Saylar, valyuta, vaxt və tarix formatlarının necə göstəriləcəyini müəyyən "
+#~ "etmək  üçün istifadə olunur , misal üçün"
+
+#~ msgid "What language to use to display text"
+#~ msgstr "Mətni göstərmək üçün istifadə olunan dil"
+
+#~ msgid "Character used for indicating positive numbers"
+#~ msgstr "Müsbət sayları göstərmək üçün istifadə olunan simvol"
+
+#~ msgid "Most countries have no character for this"
+#~ msgstr "Əksər ölkələrin bunun üçün simvolu yoxdur"
+
+#~ msgid "Path to the autostart directory"
+#~ msgstr "Avtostart qovluğuna yol"
+
+#~ msgid ""
+#~ "Path to the directory containing executables to be run on session login"
+#~ msgstr "KDE seansına girişdə, icraçı fayllar olan qovluğa aparan yol"
+
+#~ msgid "Enable SOCKS support"
+#~ msgstr "SOCKS dəstəklənməsinin aktiv etmək"
+
+#~ msgid "Whether SOCKS version 4 and 5 should be enabled in KDE's sub systems"
+#~ msgstr ""
+#~ "KDE alt sistemində ya 4-cü və 5-ci SOCKS versiyası aktiv oluna bilər"
+
+#~ msgid "Path to custom SOCKS library"
+#~ msgstr "Özəl SOCKS kitabxanasının yolu"
+
+#~ msgid "Highlight toolbar buttons on mouse over"
+#~ msgstr ""
+#~ "Kursor onların üzərində olduqda ,alətlər panelindəki düymələrin, "
+#~ "işıqlanması"
+
+#~ msgid "Show text on toolbar icons "
+#~ msgstr "Alətlər panelinin ikonları üzərində mətni göstər"
+
+#~ msgid "Whether text should be shown in addition to icons on toolbar icons"
+#~ msgstr ""
+#~ "Alətlər paneli ikonları üçün mətni əlavə ikonlarda göstərib göstərməmək"
+
+#~ msgid "Password echo type"
+#~ msgstr "Parolu daxil edərkən simvolları göstərmək"
+
+#~ msgid "The size of the dialog"
+#~ msgstr "Dialoqun ölçüsü"
+
+#~ msgid "Select Components"
+#~ msgstr "Tərkib hissələrin seçimi"

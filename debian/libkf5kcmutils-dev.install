@@ -1,5 +1,6 @@
 usr/include/KF5/KCMUtils/
-usr/include/KF5/kcmutils_version.h
+usr/include/KF5/KCMUtilsCore/
 usr/lib/*/cmake/KF5KCMUtils*
 usr/lib/*/libKF5KCMUtils.so
+usr/lib/*/libKF5KCMUtilsCore.so
 usr/lib/*/qt5/mkspecs/modules/qt_KCMUtils.pri

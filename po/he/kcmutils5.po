@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmutils5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-30 00:40+0000\n"
+"POT-Creation-Date: 2022-12-07 00:43+0000\n"
 "PO-Revision-Date: 2017-05-16 06:49-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -42,7 +42,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
 
-#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:158
+#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:160
 #, kde-format
 msgid "The module %1 is disabled."
 msgstr "המודול %1 מבוטל."
@@ -52,12 +52,12 @@ msgstr "המודול %1 מבוטל."
 msgid "The module has been disabled by the system administrator."
 msgstr ""
 
-#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:182
+#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:184
 #, kde-format
 msgid "Error loading QML file."
 msgstr ""
 
-#: kcmoduleloader.cpp:117
+#: kcmoduleloader.cpp:119
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt><p>Possible reasons:<ul><li>An error occurred during your last KDE "
@@ -78,12 +78,12 @@ msgstr ""
 "בהודעה השגיאה. אם זה נכשל, נסה להתלונן על הבעיה הזאת אצל ההפצה שלך, או האורז "
 "של החבילה.  </p></qt>"
 
-#: kcmoduleloader.cpp:151
+#: kcmoduleloader.cpp:153
 #, kde-format
 msgid "The module %1 could not be found."
 msgstr "אין אפשרות למצוא את המודול %1."
 
-#: kcmoduleloader.cpp:152
+#: kcmoduleloader.cpp:154
 #, kde-format
 msgid ""
 "<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
@@ -91,7 +91,7 @@ msgid ""
 msgstr ""
 "<qt> <p> האבחנה היא:<br />אין אפשרות למצוא את קובץ השולחן עבודה %1. </p></qt>"
 
-#: kcmoduleloader.cpp:159
+#: kcmoduleloader.cpp:161
 #, kde-format
 msgid ""
 "<qt><p>Either the hardware/software the module configures is not available "
@@ -100,30 +100,30 @@ msgstr ""
 "<qt><p>החומרה או התוכנה שהמודול קובע את הגדרותיו אינם זמינים או שהמודול בוטל "
 "על ידי המנהל.</p></qt>"
 
-#: kcmoduleloader.cpp:190
+#: kcmoduleloader.cpp:192
 #, kde-format
 msgid "Error loading config module"
 msgstr ""
 
-#: kcmoduleloader.cpp:234
+#: kcmoduleloader.cpp:236
 #, kde-format
 msgid "The module %1 is not a valid configuration module."
 msgstr "המודול %1 אינו מודול הגדרות תקף."
 
-#: kcmoduleloader.cpp:235
+#: kcmoduleloader.cpp:237
 #, kde-format
 msgid ""
 "<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
 "qt>"
 msgstr "<qt> האבחנה היא:<br />קיצור הדרך %1 לא מציין ספריה</qt>"
 
-#: kcmoduleproxy.cpp:105
+#: kcmoduleproxy.cpp:108
 #, kde-format
 msgctxt "Argument is application name"
 msgid "This configuration section is already opened in %1"
 msgstr "סעיף הגדרות זה כבר פתוח בתוכנית %1"
 
-#: kcmultidialog.cpp:51
+#: kcmultidialog.cpp:50
 #, kde-format
 msgid ""
 "The settings of the current module have changed.\n"
@@ -132,12 +132,12 @@ msgstr ""
 "ההגדרות של המודול הנוכחי שונו.\n"
 "האם ברצונך להחיל את השינויים או לשכוח מהם?"
 
-#: kcmultidialog.cpp:53
+#: kcmultidialog.cpp:52
 #, kde-format
 msgid "Apply Settings"
 msgstr "החל הגדרות"
 
-#: kcmultidialog.cpp:258 kpluginselector.cpp:809 kpluginwidget.cpp:360
+#: kcmultidialog.cpp:257 kpluginselector.cpp:809 kpluginwidget.cpp:330
 #, kde-format
 msgid "Configure"
 msgstr "הגדרות"
@@ -200,12 +200,12 @@ msgid_plural "%1 plugins automatically removed due to plugin dependencies"
 msgstr[0] "התוסף %1 הוסר באופן אוטומטי בגלל תלויות של תוספים"
 msgstr[1] "%1 תוספים הוסרו באופן אוטומטי בגלל תלויות של תוספים"
 
-#: kpluginselector.cpp:264 kpluginwidget.cpp:57
+#: kpluginselector.cpp:264 kpluginwidget.cpp:59
 #, kde-format
 msgid "Search..."
 msgstr ""
 
-#: kpluginselector.cpp:804 kpluginwidget.cpp:355
+#: kpluginselector.cpp:804 kpluginwidget.cpp:325
 #, fuzzy, kde-format
 #| msgctxt "Used only for plugins"
 #| msgid "About %1"
@@ -216,3 +216,232 @@ msgstr "אודות %1"
 #, kde-format
 msgid "Enable component"
 msgstr "אפשר רכיב"
+
+#: qml/components/KPluginDelegate.qml:48
+#, fuzzy, kde-format
+#| msgctxt "Used only for plugins"
+#| msgid "About %1"
+msgctxt "@info:tooltip"
+msgid "About"
+msgstr "אודות %1"
+
+#: qml/components/KPluginDelegate.qml:59
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@info:tooltip"
+msgid "Configure..."
+msgstr "הגדרות"
+
+#: qml/components/KPluginSelector.qml:81
+#, kde-format
+msgid "No matches"
+msgstr ""
+
+#: qml/components/KPluginSelector.qml:81
+#, kde-format
+msgid "No plugins found"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:42
+#, kde-format
+msgctxt "Plugin name and plugin version"
+msgid "%1 %2"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:64
+#, kde-format
+msgid "Copyright"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:81
+#, kde-format
+msgid "License:"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:100
+#, kde-format
+msgid "Authors"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:117
+#, kde-format
+msgid "Credits"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:134
+#, kde-format
+msgid "Translators"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:161
+#, kde-format
+msgid "Send an email to %1"
+msgstr ""
+
+#~ msgid "Distance between desktop icons"
+#~ msgstr "מרחק בין סמלים על שולחן העבודה"
+
+#~ msgid "The distance between icons specified in pixels."
+#~ msgstr "המרחק בפיקסלים בין סמלים."
+
+#~ msgid "Widget style to use"
+#~ msgstr "סגנון פקדים לשימוש"
+
+#~ msgid ""
+#~ "The name of the widget style, for example \"keramik\" or \"plastik\". "
+#~ "Without quotes."
+#~ msgstr ""
+#~ "השם של סגנון הפקדים הגרפיים, לדוגמה \"Keramik\" או \"Plastik\" (ללא "
+#~ "המירכאות)."
+
+#~ msgid "Use the PC speaker"
+#~ msgstr "השתמש ברמקול של המחשב"
+
+#~ msgid ""
+#~ "Whether the ordinary PC speaker should be used instead of KDE's own "
+#~ "notifications system."
+#~ msgstr "האם להשתמש ברמקול הרגיל של המחשב במקום מערכת ההודעות של KDE."
+
+#~ msgid "What terminal application to use"
+#~ msgstr "באיזו יישום מסוף יש להשתמש"
+
+#~ msgid ""
+#~ "Whenever a terminal application is launched this terminal emulator "
+#~ "program will be used.\n"
+#~ msgstr ""
+#~ "כאשר מופעלת תוכנית מבוססת מסוף ייעשה שימוש בתוכנית הדמיית מסוף זו.\n"
+
+#~ msgid "Fixed width font"
+#~ msgstr "גופן ברוחב קבוע"
+
+#~ msgid ""
+#~ "This font is used when a fixed font is needed. A fixed font has a "
+#~ "constant width.\n"
+#~ msgstr "גופן זה משמש כאשר יש צורך בגופן ברוחב קבוע.\n"
+
+#~ msgid "System wide font"
+#~ msgstr "גופן מערכת עבה"
+
+#~ msgid "Font for menus"
+#~ msgstr "גופן לתפריטים"
+
+#~ msgid "What font to use for menus in applications."
+#~ msgstr "הגופן שישמש בתפריטים של יישומים."
+
+#~ msgid "Color for links"
+#~ msgstr "צבע קישורים"
+
+#~ msgid "What color links should be that have not yet been clicked on"
+#~ msgstr "הצבע בו יופיעו קישורים שטרם לחצו עליהם"
+
+#~ msgid "Color for visited links"
+#~ msgstr "צבע קישורים שביקרו בהם"
+
+#~ msgid "Font for the taskbar"
+#~ msgstr "גופן שורת המשימות"
+
+#~ msgid ""
+#~ "What font to use for the panel at the bottom of the screen, where the "
+#~ "currently running applications are."
+#~ msgstr "הגופן שישמש עבור הלוח בתחתית המסך, שם מוצגות התוכניות הפועלות כרגע."
+
+#~ msgid "Fonts for toolbars"
+#~ msgstr "גופני סרגלי־כלים"
+
+#~ msgid "Shortcut for taking screenshot"
+#~ msgstr "קיצור לצילום המסמך"
+
+#~ msgid "Shortcut for toggling Clipboard Actions on and off"
+#~ msgstr "קיצור להפעלת או ביטול פעולות על לוח העריכה"
+
+#~ msgid "Shortcut for shutting down the computer without confirmation"
+#~ msgstr "קיצור לכיבוי המחשב ללא בקשת אישור"
+
+#~ msgid "Show directories first"
+#~ msgstr "הצג ספריות תחילה"
+
+#~ msgid ""
+#~ "Whether directories should be placed at the top when displaying files"
+#~ msgstr "האם להציג תחילה ספריות בעת הצגת קבצים"
+
+#~ msgid "The URLs recently visited"
+#~ msgstr "הכתובות בהם ביקרת לאחרונה"
+
+#~ msgid "Used for auto-completion in file dialogs, for example"
+#~ msgstr "משמש להשלמה אוטומטית, למשל בדו־שיח קבצים"
+
+#~ msgid "Show file preview in file dialog"
+#~ msgstr "הצג תצוגה מקדימה של קובץ בדו־שיח קבצים"
+
+#~ msgid "Show hidden files"
+#~ msgstr "הצג קבצים מוסתרים"
+
+#~ msgid ""
+#~ "Whether files starting with a dot (convention for hidden files) should be "
+#~ "shown"
+#~ msgstr "קובע האם יש להציג קבצים ששמם מתחיל בנקודה (מוסכמה לקבצים מוסתרים)"
+
+#~ msgid "Show speedbar"
+#~ msgstr "הצג סרגל־מהיר"
+
+#~ msgid ""
+#~ "Whether the shortcut icons to the left in the file dialog should be shown"
+#~ msgstr "האם להציג את סמלי קיצורי הדרך שבצד שמאל של דו־שיח הקבצים"
+
+#~ msgid "What country"
+#~ msgstr "איזו מדינה"
+
+#~ msgid ""
+#~ "Used to determine how to display numbers, currency and time/date, for "
+#~ "example"
+#~ msgstr "קובע איך יוצגו מספרים, כסף, תאריכים שעות וכו'"
+
+#~ msgid "What language to use to display text"
+#~ msgstr "באיזו שפה יש להציג טקסט"
+
+#~ msgid "Character used for indicating positive numbers"
+#~ msgstr "התו המשמש לציון מספרים חיוביים"
+
+#~ msgid "Most countries have no character for this"
+#~ msgstr "ברוב המדינות אין תו כזה"
+
+#~ msgid "Path to the autostart directory"
+#~ msgstr "הנתיב אל ספריית ההפעלה האוטומטית"
+
+#~ msgid ""
+#~ "Path to the directory containing executables to be run on session login"
+#~ msgstr "נתיב לספרייה המכילה תוכניות שיופעלו עם הכניסה למערכת"
+
+#~ msgid "Enable SOCKS support"
+#~ msgstr "אפשר תמיכה ב־SOCKS"
+
+#~ msgid "Whether SOCKS version 4 and 5 should be enabled in KDE's sub systems"
+#~ msgstr "האם לאפשר SOCKS בגרסאות 4 ו־5 במערכות של KDE"
+
+#~ msgid "Path to custom SOCKS library"
+#~ msgstr "נתיב אל ספרייה מותאמת אישית של SOCKS"
+
+#~ msgid "Highlight toolbar buttons on mouse over"
+#~ msgstr "הדגש כפתורים בסרגלי כלים בעת מעבר עם העכבר"
+
+#~ msgid "Show text on toolbar icons "
+#~ msgstr "הצג טקסט על כפתורים בסרגלי כלים"
+
+#~ msgid "Whether text should be shown in addition to icons on toolbar icons"
+#~ msgstr "האם להציג טקסט בנוסף לסמלים בסרגלי כלים"
+
+#~ msgid "Password echo type"
+#~ msgstr "הצגת תווים בעת הקלדת ססמה"
+
+#~ msgid "The size of the dialog"
+#~ msgstr "גודל הדו־שיח"
+
+#~ msgid "Select Components"
+#~ msgstr "בחירת רכיבים"
+
+#~ msgctxt "Used only for plugins"
+#~ msgid "About %1"
+#~ msgstr "אודות %1"
+
+#~ msgid "Search Plugins"
+#~ msgstr "חיפוש תוספים"

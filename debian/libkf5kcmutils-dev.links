@@ -1,0 +1,1 @@
+usr/libexec/kf5/kcmdesktopfilegenerator usr/lib/${DEB_HOST_MULTIARCH}/libexec/kf5/kcmdesktopfilegenerator

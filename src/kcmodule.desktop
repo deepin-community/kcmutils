@@ -5,17 +5,16 @@ Name=KDE Configuration Module
 Name[af]=KDE konfigurasiemodule
 Name[ar]=وحدة لضبط كدي
 Name[as]=KDE বিন্যাসৰ অংশ
-Name[ast]=Módulu de configuración de KDE
 Name[az]=KDE Konfiqurasiya Modulu
 Name[be]=Модуль настаўлення KDE
 Name[be@latin]=Modul naładžvańnia KDE
-Name[bg]=Контролен модул на KDE
+Name[bg]=Конфигурационен модул на KDE
 Name[bn]=কে.ডি.ই. কনফিগারেশন মডিউল
 Name[bn_IN]=KDE কনফিগারেশন মডিউল
 Name[br]=Mollad kreizenn ren KDE
 Name[bs]=KDE modul za podešavanje
 Name[ca]=Mòdul de configuració del KDE
-Name[ca@valencia]=Mòdul de configuració del KDE
+Name[ca@valencia]=Mòdul de configuració de KDE
 Name[cs]=Ovládací modul KDE
 Name[csb]=Kòntrolny mòduł pùltu KDE
 Name[da]=KDE konfigurationsmodul
@@ -46,6 +45,7 @@ Name[id]=Modul Konfigurasi KDE
 Name[is]=KDE stillingaeining
 Name[it]=Modulo di configurazione KDE
 Name[ja]=KDE 設定モジュール
+Name[ka]=KDE-ის კონფიგურაციის მოდული
 Name[kk]=KDE баптау модулі
 Name[km]=ម៉ូឌុល​កំណត់​រចនាសម្ព័ន្ធ​របស់ KDE
 Name[kn]=ಕೆಡಿಇ ಸಂರಚನಾ ಘಟಕ
@@ -79,7 +79,7 @@ Name[sr@ijekavian]=КДЕ модул за подешавање
 Name[sr@ijekavianlatin]=KDE modul za podešavanje
 Name[sr@latin]=KDE modul za podešavanje
 Name[sv]=KDE-inställningsmodul
-Name[ta]=கேபசூ வடிவமைப்பு பாகம்
+Name[ta]=கே.டீ.யீ. அமைப்புக்கூறு
 Name[te]=కెడిఈ అమరిక మాడ్యూల్
 Name[tg]=Модули танзимоти KDE
 Name[th]=มอดูลปรับแต่งค่าของ KDE
@@ -132,4 +132,17 @@ Type=QStringList
 
 # the path of the KCModule's documentation
 [PropertyDef::X-DocPath]
+Type=QString
+
+# The name of the parent application that is hosting the KCM (e.g. kcontrol, systemsettings ...etc)
+[PropertyDef::X-KDE-ParentApp]
+Type=QString
+
+# A list of Keywords that can be used to find this KCModule when searching in systemsettings
+[PropertyDef::X-KDE-Keywords]
+Type=QString
+
+# A semicolon ';' separated list of Categories (e.g. Qt, KDE, X-KDE-settings-components) where
+# this module should be shown in the applications menu (e.g. the one on the Plasma panel)
+[PropertyDef::Categories]
 Type=QString

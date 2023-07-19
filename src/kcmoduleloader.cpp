@@ -20,9 +20,10 @@
 
 #include <KAboutData>
 #include <KAuthorized>
+#include <KCModule>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KPluginInfo>
+#include <KPluginFactory>
 
 #include <KQuickAddons/ConfigModule>
 
@@ -51,7 +52,6 @@ public:
 
 KCModule *KCModuleLoader::loadModule(const KPluginMetaData &metaData, QWidget *parent, const QVariantList &args)
 {
-    Q_ASSERT(metaData.isValid());
     if (!KAuthorized::authorizeControlModule(metaData.pluginId())) {
         return reportError(ErrorReporting::Inline,
                            i18n("The module %1 is disabled.", metaData.pluginId()),
@@ -92,6 +92,7 @@ KCModule *KCModuleLoader::loadModule(const KPluginMetaData &metaData, QWidget *p
         if (!kcm->mainUi()) {
             return reportError(ErrorReporting::Inline, i18n("Error loading QML file."), kcm->errorString(), parent);
         }
+        qCDebug(KCMUTILS_LOG) << "loaded KCM" << factory->metaData().pluginId() << "from path" << factory->metaData().fileName();
         return new KCModuleQml(std::move(kcm), parent, args2);
     }
 
@@ -103,6 +104,7 @@ KCModule *KCModuleLoader::loadModule(const KPluginMetaData &metaData, QWidget *p
     QT_WARNING_POP
 
     if (kcmoduleResult) {
+        qCDebug(KCMUTILS_LOG) << "loaded KCM" << factory->metaData().pluginId() << "from path" << factory->metaData().fileName();
         return kcmoduleResult;
     }
 

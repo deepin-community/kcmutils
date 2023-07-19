@@ -88,6 +88,7 @@ libKF5KCMUtils.so.5 libkf5kcmutils5 #MINVER#
  _ZN13KPluginWidget25setConfigurationArgumentsERK11QStringList@Base 5.90.0
  _ZN13KPluginWidget26setAdditionalButtonHandlerERKSt8functionIFP11QPushButtonRK15KPluginMetaDataEE@Base 5.90.0
  _ZN13KPluginWidget28setDefaultsIndicatorsVisibleEb@Base 5.90.0
+ _ZN13KPluginWidget4loadEv@Base 5.93.0
  _ZN13KPluginWidget4saveEv@Base 5.90.0
  _ZN13KPluginWidget5clearEv@Base 5.90.0
  _ZN13KPluginWidget7changedEb@Base 5.90.0

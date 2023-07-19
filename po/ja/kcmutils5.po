@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-30 00:40+0000\n"
+"POT-Creation-Date: 2022-12-07 00:43+0000\n"
 "PO-Revision-Date: 2019-04-21 21:56-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -39,7 +39,7 @@ msgstr ""
 "kom@kde.gr.jp,shinobo@leo.bekkoame.ne.jp,toyohiro@ksmplus.com,md81@bird."
 "email.ne.jp,tsuno@ngy.1st.ne.jp"
 
-#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:158
+#: kcmoduleloader.cpp:57 kcmoduleloader.cpp:160
 #, kde-format
 msgid "The module %1 is disabled."
 msgstr "モジュール “%1” は無効になっています。"
@@ -49,12 +49,12 @@ msgstr "モジュール “%1” は無効になっています。"
 msgid "The module has been disabled by the system administrator."
 msgstr ""
 
-#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:182
+#: kcmoduleloader.cpp:93 kcmoduleloader.cpp:184
 #, kde-format
 msgid "Error loading QML file."
 msgstr ""
 
-#: kcmoduleloader.cpp:117
+#: kcmoduleloader.cpp:119
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt><p>Possible reasons:<ul><li>An error occurred during your last KDE "
@@ -75,12 +75,12 @@ msgstr ""
 "られているモジュールを削除してみてください。それでも解決しない場合は、ディス"
 "トリビュータまたはパッケージ作成者に連絡してください。</p></qt>"
 
-#: kcmoduleloader.cpp:151
+#: kcmoduleloader.cpp:153
 #, kde-format
 msgid "The module %1 could not be found."
 msgstr "モジュール “%1” が見つかりませんでした。"
 
-#: kcmoduleloader.cpp:152
+#: kcmoduleloader.cpp:154
 #, kde-format
 msgid ""
 "<qt><p>The diagnosis is:<br />The desktop file %1 could not be found.</p></"
@@ -88,7 +88,7 @@ msgid ""
 msgstr ""
 "<qt><p>診断:<br />デスクトップファイル ‘%1’ が見つかりませんでした。</p></qt>"
 
-#: kcmoduleloader.cpp:159
+#: kcmoduleloader.cpp:161
 #, kde-format
 msgid ""
 "<qt><p>Either the hardware/software the module configures is not available "
@@ -97,17 +97,17 @@ msgstr ""
 "<qt><p>モジュールが設定するハードウェア/ソフトウェアがないか、管理者によって"
 "モジュールが無効にされています。</p></qt>"
 
-#: kcmoduleloader.cpp:190
+#: kcmoduleloader.cpp:192
 #, kde-format
 msgid "Error loading config module"
 msgstr ""
 
-#: kcmoduleloader.cpp:234
+#: kcmoduleloader.cpp:236
 #, kde-format
 msgid "The module %1 is not a valid configuration module."
 msgstr "モジュール “%1” は有効な設定モジュールではありません。"
 
-#: kcmoduleloader.cpp:235
+#: kcmoduleloader.cpp:237
 #, kde-format
 msgid ""
 "<qt>The diagnosis is:<br />The desktop file %1 does not specify a library.</"
@@ -116,13 +116,13 @@ msgstr ""
 "<qt>診断:<br />デスクトップファイル ‘%1’ はライブラリを指定していません。</"
 "qt>"
 
-#: kcmoduleproxy.cpp:105
+#: kcmoduleproxy.cpp:108
 #, kde-format
 msgctxt "Argument is application name"
 msgid "This configuration section is already opened in %1"
 msgstr "この設定モジュールは %1 で既に開かれています。"
 
-#: kcmultidialog.cpp:51
+#: kcmultidialog.cpp:50
 #, kde-format
 msgid ""
 "The settings of the current module have changed.\n"
@@ -131,12 +131,12 @@ msgstr ""
 "現在のモジュールの設定が変更されています。\n"
 "変更を保存しますか？破棄しますか？"
 
-#: kcmultidialog.cpp:53
+#: kcmultidialog.cpp:52
 #, kde-format
 msgid "Apply Settings"
 msgstr "設定を適用"
 
-#: kcmultidialog.cpp:258 kpluginselector.cpp:809 kpluginwidget.cpp:360
+#: kcmultidialog.cpp:257 kpluginselector.cpp:809 kpluginwidget.cpp:330
 #, kde-format
 msgid "Configure"
 msgstr "設定"
@@ -207,12 +207,12 @@ msgstr[0] ""
 msgstr[1] ""
 "プラグインの依存関係により %1 個のプラグインが自動的に削除されました"
 
-#: kpluginselector.cpp:264 kpluginwidget.cpp:57
+#: kpluginselector.cpp:264 kpluginwidget.cpp:59
 #, kde-format
 msgid "Search..."
 msgstr ""
 
-#: kpluginselector.cpp:804 kpluginwidget.cpp:355
+#: kpluginselector.cpp:804 kpluginwidget.cpp:325
 #, fuzzy, kde-format
 #| msgctxt "Used only for plugins"
 #| msgid "About %1"
@@ -223,3 +223,64 @@ msgstr "%1 について"
 #, kde-format
 msgid "Enable component"
 msgstr "コンポーネントを有効にする"
+
+#: qml/components/KPluginDelegate.qml:48
+#, fuzzy, kde-format
+#| msgctxt "Used only for plugins"
+#| msgid "About %1"
+msgctxt "@info:tooltip"
+msgid "About"
+msgstr "%1 について"
+
+#: qml/components/KPluginDelegate.qml:59
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@info:tooltip"
+msgid "Configure..."
+msgstr "設定"
+
+#: qml/components/KPluginSelector.qml:81
+#, kde-format
+msgid "No matches"
+msgstr ""
+
+#: qml/components/KPluginSelector.qml:81
+#, kde-format
+msgid "No plugins found"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:42
+#, kde-format
+msgctxt "Plugin name and plugin version"
+msgid "%1 %2"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:64
+#, kde-format
+msgid "Copyright"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:81
+#, kde-format
+msgid "License:"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:100
+#, kde-format
+msgid "Authors"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:117
+#, kde-format
+msgid "Credits"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:134
+#, kde-format
+msgid "Translators"
+msgstr ""
+
+#: qml/components/private/AboutPlugin.qml:161
+#, kde-format
+msgid "Send an email to %1"
+msgstr ""
